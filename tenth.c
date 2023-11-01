@@ -8,15 +8,15 @@ int main()
    scanf("%d", &b);
    printf("Enter a no3.: ");
    scanf("%d", &c);
-   if (a>b,a>c) 
+   if (a>b&&a>c) 
    {
       printf("%d \na is greater than b and c.",a);
    }
-   else if (a<b,b>c)
+   else if (a<b&&b>c)
    {
        printf("%d \nb is greater than a and c.",b);
    }
-   else if (a<c,b<c)
+   else if (a<c&&b<c)
    {
        printf("%d \nc is greater than a and b.",c);
    }
