@@ -10,7 +10,7 @@ int main()
 	scanf("%d",&A3);
 	SOAOT=A1+A2+A3;
 	printf("%d",SOAOT);
-	if(SOAOT==180)
+	if(SOAOT>0 || SOAOT<=180)
 	{
 		printf("\nTriangle is formed");
 	}else
