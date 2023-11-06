@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-	int L1,L2,L3;
-	printf("Enter L1 =");
-	scanf("%d",&L1);
+	//int L1,L2,L3;
+	printf("hello");
+	/*canf("%d",&L1);
 	printf("Enter L2 =");
 	scanf("%d",&L2);
 	printf("Enter L3 =");
@@ -17,5 +17,6 @@ int main()
 	}else
 	{
 	printf("\nTriangle is scalar");
-    } 
+    } */
+	return 0;
 }

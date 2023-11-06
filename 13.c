@@ -18,5 +18,8 @@ int main()
     } else if(x>0&&y<0)
     {
     	printf("\npoint lies on Quadrant 4");
+	} else
+	{
+		printf("\npoint lies on origin");
 	}
 }
