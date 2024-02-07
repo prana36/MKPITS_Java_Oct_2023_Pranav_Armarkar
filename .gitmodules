@@ -4,3 +4,6 @@
 [submodule "MKPITS_HTML_Pranav_Armarkar"]
 	path = MKPITS_HTML_Pranav_Armarkar
 	url = https://github.com/prana36/MKPITS_HTML_Pranav_Armarkar.git
+[submodule "MKPITS_C_Pranav_Armarkar"]
+	path = MKPITS_C_Pranav_Armarkar
+	url = https://github.com/prana36/MKPITS_C_Pranav_Armarkar.git
