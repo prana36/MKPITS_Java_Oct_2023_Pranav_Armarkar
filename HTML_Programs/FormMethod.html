@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Www.mkpits.com</title>
+</head>
+<body>
+
+    <!-- This HTML form with the ID "form1" uses the HTTP GET method to send data. 
+        It includes fields for entering a name, password, city, and uploading a file. 
+        The form has two submit buttons: one with the default form method (GET) and another explicitly set to use the POST method. 
+        When the "Submit" button is clicked, the form data is sent using GET. When the "Admin Submit" button is clicked, 
+        the form data is sent using POST method, overriding the default method for that button. -->
+        <form id="form1" method="get">
+      Name: <input type="text" name="name" /><br /><br />
+      Password: <input type="password" name="pass" /><br /><br />
+      City: <input type="text" name="city" /><br /><br />
+      Upload: <input type="file" name="file" /><br />
+      <br />
+      <input type="submit" value="Submit" /><br /><br />
+      <input
+        type="submit"
+        value="Admin Submit"
+        formmethod="post"
+      /><br /><br />
+    </form>
+</body>
+</html>
