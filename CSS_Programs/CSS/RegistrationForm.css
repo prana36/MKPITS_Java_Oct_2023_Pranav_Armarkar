@@ -1,0 +1,12 @@
+div {
+  color: #07e64d;
+}
+input {
+  border-width: bold;
+}
+body {
+  background-image: url("logog.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
