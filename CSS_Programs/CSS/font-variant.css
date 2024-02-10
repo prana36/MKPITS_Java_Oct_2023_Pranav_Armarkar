@@ -1,0 +1,24 @@
+ /* It specifies whether or not a font is a  small-caps font. 
+ We can set this property to either normal or small-caps.
+Ex: -
+p { font-variant: small-caps; } */
+
+ p {
+  /* font-family: Arial, serif, "Times New Roman";
+  font-size: larger; */
+  font-stretch: narrower;
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+h3{
+    font-style: oblique;
+    font-variant: small-caps;
+}
+sup {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+  font-stretch: extra-condensed;
+}

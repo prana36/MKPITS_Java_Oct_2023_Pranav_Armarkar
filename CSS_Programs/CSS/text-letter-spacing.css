@@ -1,0 +1,23 @@
+/* It specifies the space between text characters. 
+We can set this property to either normal or specify 
+it in the form of the distance between two consecutive letters
+ using identifier, such as px (pixels), in (inches), pt(points) and cm (centimeters).
+Length = px, in, pt, cm, em
+
+h1{letter-spacing: 50px;}
+h1{letter-spacing: 3px}  */
+h1{
+    color: rgb(80, 210, 30);
+    text-align: center;
+   letter-spacing: 5px;
+}
+h3{
+      color: brown;
+      text-align: center;
+      letter-spacing: 8px;
+}
+p{
+    color: brown;
+    letter-spacing: 1px;
+    
+}

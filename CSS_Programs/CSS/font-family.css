@@ -1,0 +1,19 @@
+/* We can specify a list of font names for the text contained inside an HTML element, using font-family property.
+Ex:- 
+p {   font-family: Arial, serif, "Times New Roman";   }
+
+If the name of a font family is more than one word, it must be in quotation marks.
+Ex:- 
+“Times New Roman”
+Times */
+
+p {
+  font-family: Arial, serif, "Times New Roman";
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+sup {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

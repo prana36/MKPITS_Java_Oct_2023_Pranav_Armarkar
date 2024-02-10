@@ -1,0 +1,20 @@
+/* The Font properties is used to set font related styles for the text present on an HTML. 
+font-family
+font-size
+font-stretch
+font-style
+font-variant
+font-weight
+font  */
+
+/* It defines a shorthand property for font-style, font-variant, font-weight, font-size, line-height, and font-family properties. 
+Ex:- 
+p { font: bold 20px serif;}
+
+The properties must be set in order: "font-style font-variant font-weight font-size/line-height font-family"
+
+The font-size and font-family values are required. */
+
+p {
+  font: bold 20px serif;
+}

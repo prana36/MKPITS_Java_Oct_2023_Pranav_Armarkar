@@ -1,0 +1,33 @@
+/* It specifies the shadow effect added to text. 
+We can add more than one shadow to the text, separated by comma. 
+Syntax: -  text-shadow: h-shadow v-shadow blur-radius color
+h-shadow - The position of the horizontal shadow. Negative values are allowed.
+v-shadow - The position of the vertical shadow. Negative values are allowed.
+blur-radius - The blur radius. Default value is 0
+color – The color of the shadow
+none - No shadow
+h1{text-shadow: 2px 2px 5px red;}
+h2{text-shadow: 2px 2px 5px red, 5px 5px 8px blue;} */
+
+h1 {
+  color: rgb(80, 210, 30);
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 50px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px rgb(50, 11, 206);
+}
+h3 {
+  color: brown;
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 50px;
+  text-decoration: overline;
+  text-shadow: 2px 2px 5px red, 5px 5px 8px blue;
+}
+p {
+  color: brown;
+  letter-spacing: 1px;
+  text-decoration: line-through;
+  text-indent: 30px;
+}

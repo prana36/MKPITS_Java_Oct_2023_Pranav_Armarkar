@@ -1,0 +1,10 @@
+/* It specifies the appearance of the list item maker 
+if the list-style-image property has the value none or if the image specified through this property cannot be displayed.
+ We can set this property to none, disc, circle, square, decimal, decimal-leading-zero, lower-roman, 
+ upper-roman, lower-alpha, upper-alpha, lower-greek, lower-latin, upper-latin, hebrew, armenian, georgian, cjk-ideographic, 
+ hiragana, katakana, hiragana-iroha, or katakana-iroha. 
+Ex: - 
+ul { list-style-type: circle; } */
+u1{
+    list-style-type: lower-alpha;
+}

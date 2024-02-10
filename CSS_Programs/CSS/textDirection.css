@@ -1,0 +1,17 @@
+/* It specifies the text direction. 
+We can set this property to either ltr 
+(left to right) or rtl (right to left). 
+
+h1{direction: rtl;} */
+
+h1{
+    color: rgb(80, 210, 30);
+    direction: rtl;
+}
+h3{
+      color: brown;
+      direction: rtl;
+}
+p{
+    color: brown;
+}

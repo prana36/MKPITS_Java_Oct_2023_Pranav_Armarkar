@@ -1,0 +1,76 @@
+/* The word-break property specifies line breaking rules for non-CJK scripts.
+ CJK scripts are Chinese, Japanese and Korean ("CJK") scripts. 
+ We can set this property to normal, break-all or keep-all.
+normal - Default value. Break words according to their usual rules
+break-all - Lines may break between any two letters
+keep-all - Breaks are prohibited between pairs of letters
+
+p{word-break: break-all;} */
+
+h1 {
+  color: rgb(80, 210, 30);
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 50px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px rgb(50, 11, 206);
+  vertical-align: super;
+  /* text-align-last: right; */
+  word-break: break-all;
+}
+h3 {
+  color: brown;
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 50px;
+  text-decoration: overline;
+  text-shadow: 2px 2px 5px red, 5px 5px 8px blue;
+}
+p {
+  color: brown;
+  letter-spacing: 1px;
+  /* text-decoration: line-through; */
+  text-indent: 30px;
+  text-transform: uppercase;
+  /* white-space: nowrap; */
+  /* white-space: pre-line; */
+  /* white-space: pre-wrap; */
+  word-spacing: 10px;
+  text-align-last: right;
+
+}
+sup {
+  vertical-align: middle;
+}h1 {
+  color: rgb(80, 210, 30);
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 50px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px rgb(50, 11, 206);
+  vertical-align: super;
+}
+h3 {
+  color: brown;
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 50px;
+  text-decoration: overline;
+  text-shadow: 2px 2px 5px red, 5px 5px 8px blue;
+}
+p {
+  color: brown;
+  letter-spacing: 1px;
+  /* text-decoration: line-through; */
+  text-indent: 30px;
+  text-transform: uppercase;
+  /* white-space: nowrap; */
+  /* white-space: pre-line; */
+  /* white-space: pre-wrap; */
+  word-spacing: 10px;
+  word-wrap: break-word;
+
+}
+sup {
+  vertical-align: middle;
+}

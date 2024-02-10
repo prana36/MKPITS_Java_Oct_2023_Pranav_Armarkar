@@ -1,0 +1,72 @@
+
+/* The text-align-last property specifies how to align the last line of a text. 
+The text-align-last property will only work for elements with the text-align property set to "justify".
+ We can set this property to auto, left, right, center, justify, start, or end.
+
+p { text-align: justify;  text-align-last: right; } */
+
+
+h1 {
+  color: rgb(80, 210, 30);
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 50px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px rgb(50, 11, 206);
+  vertical-align: super;
+  text-align-last: right;
+}
+h3 {
+  color: brown;
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 50px;
+  text-decoration: overline;
+  text-shadow: 2px 2px 5px red, 5px 5px 8px blue;
+}
+p {
+  color: brown;
+  letter-spacing: 1px;
+  /* text-decoration: line-through; */
+  text-indent: 30px;
+  text-transform: uppercase;
+  /* white-space: nowrap; */
+  /* white-space: pre-line; */
+  /* white-space: pre-wrap; */
+  word-spacing: 10px;
+  text-align-last: right;
+
+}
+sup {
+  vertical-align: middle;
+}h1 {
+  color: rgb(80, 210, 30);
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 50px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px rgb(50, 11, 206);
+  vertical-align: super;
+}
+h3 {
+  color: brown;
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 50px;
+  text-decoration: overline;
+  text-shadow: 2px 2px 5px red, 5px 5px 8px blue;
+}
+p {
+  color: brown;
+  letter-spacing: 1px;
+  /* text-decoration: line-through; */
+  text-indent: 30px;
+  text-transform: uppercase;
+  /* white-space: nowrap; */
+  /* white-space: pre-line; */
+  /* white-space: pre-wrap; */
+  word-spacing: 10px;
+}
+sup {
+  vertical-align: middle;
+}

@@ -1,0 +1,24 @@
+
+/* It specifies the distance between two lines. 
+We can set this property to normal or specify 
+it in the form of length, number or percentage.
+
+p{line-height: 60%;}
+h1{line-height: 150px;} */
+h1{
+    color: rgb(80, 210, 30);
+    text-align: center;
+   letter-spacing: 5px;
+   line-height: 50px;
+}
+h3{
+      color: brown;
+      text-align: center;
+      letter-spacing: 8px;
+      line-height: 50px;
+}
+p{
+    color: brown;
+    letter-spacing: 1px;
+    
+}

@@ -1,0 +1,18 @@
+/* It specifies alignment of text. 
+We can set this property to left, right, center, or justify.
+
+h1{text-align: right;}
+p{text-align: center;} */
+
+h1{
+    color: rgb(80, 210, 30);
+   text-align: right;
+}
+h3{
+      color: brown;
+      text-align: center;
+}
+p{
+    color: brown;
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+/* It specifies a normal, condensed or extended font face. 
+We can set this property to normal, wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded. 
+Ex:- 
+p { font-stretch: condensed; } */
+
+p {
+  /* font-family: Arial, serif, "Times New Roman";
+  font-size: larger; */
+  font-stretch: narrower;
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+sup {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+  font-stretch: extra-condensed;
+}

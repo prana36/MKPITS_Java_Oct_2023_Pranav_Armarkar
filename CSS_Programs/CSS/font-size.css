@@ -1,0 +1,21 @@
+/* We can specify a font size for the text. We can specify size in the form of percentage, px, em.
+Ex:- 
+p { font-size: 50%; }
+p { font-size: 16px }
+p { font-size: 2em; }
+p { font-size: xx-small; }
+
+The default text size in browsers is 16px or 1em.  */
+p {
+  font-family: Arial, serif, "Times New Roman";
+  font-size: larger;
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+sup {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+}

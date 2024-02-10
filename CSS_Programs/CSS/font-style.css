@@ -1,0 +1,24 @@
+/* It specifies the style of the font. We can set this property to normal, italic, oblique.
+Ex:- 
+p { font-style: italic; }
+
+By default text is normal */
+
+p {
+  /* font-family: Arial, serif, "Times New Roman";
+  font-size: larger; */
+  font-stretch: narrower;
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+h3{
+    font-style: oblique;
+}
+sup {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+  font-stretch: extra-condensed;
+}

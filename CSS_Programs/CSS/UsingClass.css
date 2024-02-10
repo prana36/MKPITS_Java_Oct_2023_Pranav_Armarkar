@@ -1,0 +1,13 @@
+/* Class selectors are used where you want to apply a style either on some of tag or across
+ the several tags without repeating the style rule in an HTML document. 
+ Using this method of creating styles, you can create styles in the form of style classes 
+ in an external style sheet or as an internal style sheet. The class attribute is used to apply style class in HTML Tag.   */
+.head {
+  color: rgb(7, 72, 46);
+}
+.head1 {
+  color: brown;
+}
+.dis {
+  color: violet;
+}

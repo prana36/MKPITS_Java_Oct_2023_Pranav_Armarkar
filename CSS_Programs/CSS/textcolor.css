@@ -1,0 +1,16 @@
+/* Color property set the color of text. 
+We can set this property to either a color name or color value.
+Color name – red, green, blue etc
+Color value 
+	Hex value -  #F0E68C
+	RGB value – rgb(240,230,140) 
+
+h1{color: red;}
+p{color: #F0E68C;} */
+
+h1{
+    color: rgb(80, 210, 30);
+}
+p{
+    color: brown;
+}

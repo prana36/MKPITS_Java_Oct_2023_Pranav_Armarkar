@@ -1,0 +1,36 @@
+/* The word-spacing property increases or decreases the white space between words. 
+We can set this property to normal or specify in the form of length value.
+
+p{word-spacing: 20px}; */
+
+h1 {
+  color: rgb(80, 210, 30);
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 50px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 6px rgb(50, 11, 206);
+  vertical-align: super;
+}
+h3 {
+  color: brown;
+  text-align: center;
+  letter-spacing: 8px;
+  line-height: 50px;
+  text-decoration: overline;
+  text-shadow: 2px 2px 5px red, 5px 5px 8px blue;
+}
+p {
+  color: brown;
+  letter-spacing: 1px;
+  /* text-decoration: line-through; */
+  text-indent: 30px;
+  text-transform: uppercase;
+  /* white-space: nowrap; */
+  /* white-space: pre-line; */
+  /* white-space: pre-wrap; */
+  word-spacing: 10px;
+}
+sup {
+  vertical-align: middle;
+}

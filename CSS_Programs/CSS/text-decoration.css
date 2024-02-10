@@ -1,0 +1,24 @@
+/* It specifies the decoration added to the text. 
+We can set this property to none, underline, overline, line-through.
+
+h1{text-decoration: underline;} */
+
+h1{
+    color: rgb(80, 210, 30);
+    text-align: center;
+   letter-spacing: 5px;
+   line-height: 50px;
+   text-decoration: underline;
+}
+h3{
+      color: brown;
+      text-align: center;
+      letter-spacing: 8px;
+      line-height: 50px;
+      text-decoration: overline;
+}
+p{
+    color: brown;
+    letter-spacing: 1px;
+  text-decoration: line-through;   
+}

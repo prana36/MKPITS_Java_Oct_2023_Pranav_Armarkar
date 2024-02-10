@@ -1,0 +1,28 @@
+
+/* The font weight property allows to set the font weight of the text present on an HTML Page.
+ We can set this property to normal, bold, bolder, lighter, number (100, 200, 300 upto 900) 
+Ex: -
+p {  font-weight: bold; }
+p {  font-weight: 500; } */
+
+
+ p {
+  /* font-family: Arial, serif, "Times New Roman";
+  font-size: larger; */
+  /* font-stretch: narrower; */
+  font-weight: 900;
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+h3{
+    font-style: oblique;
+    font-variant: small-caps;
+}
+sup {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+  font-stretch: extra-condensed;
+}

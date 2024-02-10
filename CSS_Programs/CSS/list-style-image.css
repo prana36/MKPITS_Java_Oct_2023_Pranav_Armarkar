@@ -1,0 +1,10 @@
+/* In this an image is used as the list item marker. We can set this property to none or web address of an image. 
+Ex: -
+ ul { list-style-image: url('book.png'); } */
+
+ ul{
+    list-style-image: url(/AllImages/Green02.jpg);
+
+ }
+    
+ 
