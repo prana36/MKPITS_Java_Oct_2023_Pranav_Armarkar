@@ -1,0 +1,9 @@
+/* For specifying table we use border property. 
+Ex: -
+table, th, td { border: 2px solid blue; } */
+
+
+table,th,td{
+    border: 2px solid blue;
+
+}

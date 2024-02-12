@@ -5,7 +5,7 @@ input {
   border-width: bold;
 }
 body {
-  background-image: url("logog.jpg");
+  /* background-image: url("logog.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

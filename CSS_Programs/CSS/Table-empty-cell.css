@@ -1,0 +1,17 @@
+
+/* This property is used to set whether or not to display borders and background on empty cells in a table. 
+It will work only if the border-collapse is set to separate. We can set this property to show (default) or hide.
+Ex:- 
+table { empty-cells: hide; }
+ */
+
+table,
+th,
+td {
+  border: 2px solid blue;
+}
+table {
+  border-collapse: separated;
+  border-spacing: 9px 20px;
+  empty-cells: hide;
+}

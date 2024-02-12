@@ -1,0 +1,25 @@
+/* We use width and height property to set table width and height.
+We can also set table heading (th) width and height. 
+table { width: 100% ;}
+th { height: 10px; } */
+
+table,
+th,
+td {
+  border: 2px solid blue;
+   /* height: 100px; */
+}
+table {
+  border-collapse: separated;
+  border-spacing: 9px 20px;
+  width: 100%;
+  empty-cells: hide;
+  
+}
+th{
+    height: 100px;
+}
+td{
+    height: 50px;
+}
+

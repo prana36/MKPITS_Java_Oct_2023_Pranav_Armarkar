@@ -1,0 +1,13 @@
+
+
+/* This property sets whether 
+the table borders are collapsed into a single border or detached. We can set this property to separate (default) and collapse.
+Ex:- 
+table { border-collapse: collapse; } */
+table { border-collapse: collapse; }
+
+table,th,td{
+    border: 2px solid blue;
+    /* border-collapse: collapse; */
+
+}

@@ -1,0 +1,11 @@
+/* It is shorthand of all border properties. 
+The order should be : border-width, border-style, and border-color.
+Ex: -
+p { border: 10px solid blue; }
+p { border: solid blue; } */
+
+
+h2{
+    border: 5px solid blue ;
+
+}

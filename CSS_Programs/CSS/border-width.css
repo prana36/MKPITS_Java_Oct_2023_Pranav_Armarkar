@@ -1,0 +1,22 @@
+/* It sets width of element’s border. 
+We can set this property to thin, medium, thick, length in the form of px. 
+Ex:- 
+p {  border-style: solid; border-width: thick;}
+p {  border-style: solid; border-width: 5px;} */
+/* possiblity to give
+p { border-width: thick medium thin 5px; }
+
+
+p { border-width: thick medium 5px; }
+
+
+p { border-width: thick thin; }
+
+
+p { border-width: 5px; } */
+
+
+p{
+    border-style: dashed;
+    border-width: thick;
+}

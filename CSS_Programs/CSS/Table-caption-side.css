@@ -1,0 +1,17 @@
+/* This property is used to place a caption for table. 
+We can set this property to top (default) or bottom.
+Ex:- 
+caption { caption-side: bottom; } */
+
+table,
+th,
+td {
+  border: 2px solid blue;
+}
+table {
+  border-collapse: separated;
+  border-spacing: 9px 20px;
+}
+caption{
+    caption-side: bottom;
+}

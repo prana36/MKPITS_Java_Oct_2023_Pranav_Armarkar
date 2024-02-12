@@ -1,0 +1,17 @@
+/* This property is used to set table layout. 
+We can set this property either auto (default) or fixed .
+Ex: -
+table { table-layout: fixed; } */
+
+
+table,
+th,
+td {
+  border: 2px solid blue;
+}
+table {
+  border-collapse: separated;
+  border-spacing: 9px 20px;
+  table-layout: fixed;
+
+}

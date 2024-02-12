@@ -1,0 +1,24 @@
+/* This property is used to control the space between the border and the content in a table, 
+this is used on <td> and <th> elements.
+th, td { padding: 10px; } */
+
+table,
+th,
+td {
+  border: 2px solid blue;
+   /* height: 100px; */
+   padding: 20px;
+}
+table {
+  border-collapse: separated;
+  border-spacing: 9px 20px;
+  width: 100%;
+  empty-cells: hide;
+  
+}
+/* th{
+    height: 100px;
+}
+td{
+    height: 50px;
+} */

@@ -1,0 +1,24 @@
+
+/* This property sets border style of an element.
+ We can set this property to none, hidden, 
+ dotted, dashed, solid, double, groove, ridge, inset, outset. 
+Ex:- 
+p { border-style: dashed; } */
+/* possiblity */
+
+/* p { border-style: dotted solid double dashed; }
+
+
+p { border-style: dotted solid dashed; }
+
+
+p { border-style: dotted solid; }
+
+
+p { border-style: dotted; } */
+
+
+h2{
+    /* border-style: dotted; */
+    border-style: dotted solid double dashed;
+}

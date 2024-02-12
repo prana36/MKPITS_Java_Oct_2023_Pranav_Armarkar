@@ -1,0 +1,21 @@
+/* It sets color of border. We can set this property to transparent and color value. 
+Ex:- 
+p {  border-style: solid; border-color: blue;}
+p {  border-style: solid; border-color: #5A4218;} */
+
+/* possiblity  giving color to border
+p { border-color: blue red black green; }
+
+
+p { border-color: blue orange green; }
+
+
+p { border-color: green orange; }
+
+
+p { border-color: blue; } */
+
+p{
+    border-style:dashed ;
+    border-color: chocolate;
+}

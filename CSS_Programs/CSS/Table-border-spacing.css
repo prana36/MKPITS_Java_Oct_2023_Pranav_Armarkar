@@ -1,0 +1,16 @@
+/* This property is used to set the distance between the borders of adjacent cells. This will work only when border-collapse is separated. 
+We can set this property to horizontal spacing and vertical spacing in the form of cm, px.
+ 
+Ex:- 
+table { border-collapse: separated; border-spacing: 5px 10px; }
+ */
+
+table,
+th,
+td {
+  border: 2px solid blue;
+}
+table {
+  border-collapse: separated;
+  border-spacing: 9px 20px;
+}
