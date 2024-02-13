@@ -4,6 +4,7 @@
   color: cyan;
 
   text-align: end;
+   position:fixed ;
 }
 .container > div {
   /* border: 2px solid yellowgreen; */
@@ -27,8 +28,6 @@
   cursor: pointer;
 }
 body{
-    /* background-image: url(/AllImages/Canon.jpg);
-    background-repeat: no-repeat ;
-    width:; */
+  
 
 }

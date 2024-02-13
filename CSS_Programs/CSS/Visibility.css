@@ -1,0 +1,14 @@
+/* This property is used to specify whether or not an element is visible. 
+We can set this property to visible (default), hidden or collapse.
+
+hidden - The element is invisible not removed.
+collapse – This value is only used for table elements. 
+collapse removes a row or column, but it does not affect the table layout. 
+The space taken up by the row or column will be available for other content. 
+If collapse is used on other elements, it will be treated as “hidden”.
+Ex:- 
+p { visibility: hidden;} */
+
+p {
+  visibility: hidden;
+}

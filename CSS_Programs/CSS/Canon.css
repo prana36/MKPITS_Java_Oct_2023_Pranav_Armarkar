@@ -1,0 +1,42 @@
+*{
+    margin: 0%;
+}
+
+
+.container{
+    text-align: end;
+    
+}
+.container > div{
+    /* position: relative; */
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    text-decoration: underline;
+    padding-right: 20px;
+    
+
+    
+    
+    /* float: right; */
+}
+body{
+    background-image: url(/AllImages/Canon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+
+}
+.container > div:hover {
+    font-size: 17px;
+    text-shadow: 5px 5px 5px rgb(55, 28, 28);
+    cursor: pointer;
+   
+}
+.Model{
+    float: inline-start;
+}
+.Model:hover{
+    font-size: 17px;
+    cursor: pointer;
+
+}
