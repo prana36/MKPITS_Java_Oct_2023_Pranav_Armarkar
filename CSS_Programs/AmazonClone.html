@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon</title>
+    <link
+      rel="shortcut icon"
+      href="AllImages/Favicon-amazon-16.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      *{
+        margin-top: 0%;
+
+      }
+      .nav {
+        display: flex;
+        background-color: rgb(5, 5, 251);
+        height: 60px;
+        
+      }
+      .searchbar{
+        display: flex;
+      }
+      .input{
+        /* padding: 10px 4px 10px 4px; */
+        height: 38px;
+        width: 700px;
+        background-color: rgba(254, 67, 4, 0.607);
+         margin-top: 10px;
+      }
+      .input_in{
+        height: 33px;
+        width: 694px;
+      }
+      .search{
+        /* padding: 10px 4px 10px 4px; */
+        margin-top: 10px;
+        background-color: rgba(217, 175, 4, 0.607);
+        height: 38px;
+        width: 40px;
+       align-items: center;
+       justify-content: center;
+       display: flex;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <img
+          height="58px"
+          width="127px"
+          src="AllImages/Amazon_Logo.png"
+          alt=""
+        />
+      </div>
+      <div class="location_logo">
+        <img src="AllImages/location-16.png" alt="location" />
+        <span class="CAP">Delevary To Pranav</span> <br />
+        <span class="address">KORADI 441113</span>
+      </div>
+      <div class="searchbar">
+        <div class="select">
+        <select
+          name="All"
+          id=""
+          style="  margin-top: 10px;  width: 40px; height: 38px; background-color: rgb(205, 203, 203)"
+        >
+          <option value="">All Categories</option>
+          <option value="">Alexa Skills</option>
+          <option value="">Amazon Devices</option>
+          <option value="">Amazon Fashion</option>
+          <option value="">Amazon Pharmacy</option>
+          <option value="">Appliances</option>
+          <option value="">Apps & Games</option>
+        </select>
+        </div>
+        <div class="input">
+            <input class="input_in" type="text" placeholder="Search Amazon.in"   >
+        </div>
+        <div class="search">
+            <!-- <input type="button"> -->
+            <img  height="25px" src="AllImages/search-24.png" alt="">
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
