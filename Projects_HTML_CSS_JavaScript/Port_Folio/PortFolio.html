@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortFolio</title>
+    <link
+      rel="shortcut icon"
+      href="Images/icons8-male-profile-pic-16.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      * {
+        /* margin: 0%; */
+      }
+      /* body {
+        background-image: url(Images/3383078.jpg);
+        background-repeat: no-repeat;
+        
+        background-size: cover;
+      } */
+      .nav {
+        width: 100%;
+      }
+
+      .List {
+        display: flex;
+        list-style-type: none;
+        color: rgb(184, 214, 240);
+        float: right;
+        margin-right: 20px;
+      }
+      li {
+        padding-left: 30px;
+      }
+      h1,
+      li:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+      .cont {
+        height: 330px;
+        width: 330px;
+        color: rgb(112, 179, 238);
+        float: right;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+      }
+      .profile {
+        height: 330px;
+        /* margin-left: 10px; */
+        border-radius: 50%;
+      }
+      .profile:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header class="nav">
+        <span
+          style="
+            display: inline-block;
+            color: rgb(184, 214, 240);
+            margin-left: 30px;
+          "
+          ><h1>PortFolio</h1></span
+        >
+        <ul class="List">
+          <li>HOME</li>
+          <li>SKILLS</li>
+          <li>PROJECTS</li>
+          <li>ABOUT US</li>
+        </ul>
+      </header>
+
+      <div class="cont">
+        <img class="profile" src="Images/Profile.png" alt="" />
+      </div>
+      <div>
+        <h1>HELLo , My Name Is</h1>
+      </div>
+    </div>
+    <span id="element">Pranav</span>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["<i>First</i> Java Developer.", "&amp; a second sentence."],
+        typeSpeed: 50,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

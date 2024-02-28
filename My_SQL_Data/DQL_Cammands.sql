@@ -7,4 +7,7 @@ where id=3;
 select * from emp
 where id=3;
 
-update emp set salary=90000 where id=1;
+update emp set salary='null' where id=1;
+
+desc emp;
+ create table stud(id int auto_increment , name varchar(230) );
