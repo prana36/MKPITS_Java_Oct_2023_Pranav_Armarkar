@@ -1,0 +1,383 @@
+#container2 {
+  height: 700px;
+  /* background-color: rgb(33, 18, 72); */
+  background-image: url(Images/black-prism-concept-ai-generated.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 106, 0);
+  font: sans-serif;
+  /* margin-top: 30px; */
+  padding-top: 50px;
+}
+.Skills {
+  display: flex;
+  justify-content: center;
+  color: rgb(189, 189, 195);
+  font: 20px sans-serif;
+  /* margin-top: 30px; */
+  /* padding-top: 30px; */
+}
+#inner_container {
+  /* background-color: brown; */
+  height: 450px;
+  margin-top: 20px;
+  display: flex;
+}
+#inner_1 {
+  height: 430px;
+  width: 650px;
+
+  /* border: 3px solid;
+  border-radius: 7px; */
+  margin-left: 10px;
+}
+.skill {
+  margin-top: 20px;
+
+  margin-left: 4px;
+
+  height: 30px;
+  width: 640px;
+  display: flex;
+}
+.name1 {
+  margin-top: 7px;
+  margin-left: 15px;
+  width: 130px;
+  font: 18px poppins, sans-serif;
+  color: rgb(250, 251, 248);
+}
+.percentage {
+  margin-top: 7px;
+  position: relative;
+
+  margin-left: 450px;
+
+  font: 18px poppins, sans-serif;
+  color: rgb(91, 215, 3);
+}
+.pro {
+  border: 1px solid;
+  border-radius: 10px;
+  height: 7px;
+  width: 580px;
+  margin-left: 10px;
+}
+
+.progress {
+  margin: 1px;
+  height: 5px;
+  width: 90%;
+  background-color: rgb(255, 106, 0);
+  animation: progress 5s ease forwards;
+}
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  99% {
+    width: 100%;
+  }
+}
+
+.progress1 {
+  margin: 1px;
+  height: 5px;
+  width: 95%;
+  background-color: rgb(255, 106, 0);
+  animation: progress 5s ease forwards;
+}
+@keyframes progress1 {
+  0% {
+    width: 0%;
+  }
+  99% {
+    width: 100%;
+  }
+}
+
+.progress2 {
+  margin: 1px;
+  height: 5px;
+  width: 85%;
+  background-color: rgb(255, 106, 0);
+  animation: progress 5s ease forwards;
+}
+@keyframes progress2 {
+  0% {
+    width: 0%;
+  }
+  99% {
+    width: 100%;
+  }
+}
+
+.progress3 {
+  margin: 1px;
+  height: 5px;
+  width: 80%;
+  background-color: rgb(255, 106, 0);
+  animation: progress 5s ease forwards;
+}
+@keyframes progress3 {
+  0% {
+    width: 0%;
+  }
+  99% {
+    width: 100%;
+  }
+}
+.progress4 {
+  margin: 1px;
+  height: 5px;
+  width: 60%;
+  background-color: rgb(255, 106, 0);
+  animation: progress 5s ease forwards;
+}
+@keyframes progress4 {
+  0% {
+    width: 0%;
+  }
+  99% {
+    width: 100%;
+  }
+}
+
+.progress5 {
+  margin: 1px;
+  height: 5px;
+  width: 99%;
+  background-color: rgb(255, 106, 0);
+  animation: progress 5s ease forwards;
+}
+@keyframes progress5 {
+  0% {
+    width: 0%;
+  }
+  99% {
+    width: 100%;
+  }
+}
+
+.progress6 {
+  margin: 1px;
+  height: 5px;
+  width: 50%;
+  background-color: rgb(255, 106, 0);
+  animation: progress 5s ease forwards;
+}
+@keyframes progress6 {
+  0% {
+    width: 0%;
+  }
+  99% {
+    width: 100%;
+  }
+}
+
+#middle {
+  height: 430px;
+  width: 300px;
+}
+#middle img {
+  height: 200px;
+}
+
+#inner_2 {
+  height: 430px;
+  width: 540px;
+  /* background-color: rgb(18, 225, 233); */
+  border: 3px dotted rgb(255, 106, 0);
+  border-radius: 5px;
+}
+.Creative {
+  font: 25px sans-serif;
+  padding-left: 80px;
+  color: rgb(173, 3, 3);
+  margin-top: 20px;
+}
+#inner_2 a:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#contianer3 {
+  height: 700px;
+  /* background-color: chartreuse; */
+  background-image: url(Images/black-prism-concept-ai-generated.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  /* justify-content: center; */
+}
+.inner_container1 {
+  height: 470px;
+  margin-top: 35px;
+  margin-left: 65px;
+  width: 1400px;
+  display: flex;
+  /* background-color: blue; */
+}
+.innercon1 {
+  height: 430px;
+  width: 650px;
+  margin-top: 30px;
+  margin-left: 10px;
+  /* background-color: rgb(11, 7, 1); */
+}
+.acc {
+  height: 50px;
+  width: 600px;
+
+  margin-top: 30px;
+  margin-left: 7px;
+  display: flex;
+}
+
+.acc img {
+  height: 20px;
+}
+
+.innercon2 {
+  height: 430px;
+  width: 680px;
+  margin-top: 30px;
+  margin-left: 57px;
+  /* background-color: rgb(11, 7, 1); */
+  border: 3px dotted rgb(255, 106, 0);
+  border-radius: 5px;
+}
+#reg1 {
+  height: 70px;
+  /* background-color: brown; */
+  margin-top: 20px;
+}
+#reg1 input {
+  width: 310px;
+  height: 45px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+::placeholder {
+  font-size: 20px;
+  padding-left: 10px;
+}
+.sub {
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 650px;
+  height: 45px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size: 20px;
+}
+input {
+  font: 20px sans-serif;
+  background-color: rgb(193, 193, 194);
+}
+.butt {
+  display: inline-block;
+  margin-top:5px;
+  /* background-color: black; */
+  /* justify-content: center; */
+  margin-left: 270px;
+}
+.butt button {
+  width: 150px;
+  height: 50px;
+  font: 20px sans-serif;
+  background-color: rgb(255, 106, 0);
+  border-radius: 30px;
+  
+  animation: progress1 4s;
+}
+
+.butt button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.butt a {
+  text-decoration: none;
+  color: rgb(4, 1, 4);
+}
+.midcon {
+  height: 3px;
+  width: 1518px;
+  background-color: gold;
+  position: absolute;
+  animation: progress 10s infinite;
+}
+
+#contianer4 {
+  height: 700px;
+  /* background-color: blue; */
+  /* margin-top: 84px; */
+  background-image: url(Images/black-prism-concept-ai-generated.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+.about {
+  margin-top: 60px;
+  height: 450px;
+  /* background-color: blue; */
+  display: flex;
+}
+#inner_con1 {
+  height: 430px;
+  width: 430px;
+  /* background-color: black; */
+  margin-top: 10px;
+  margin-left: 40px;
+  background-image: url(Images/profile2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#inner_con2 {
+  height: 430px;
+  width: 720px;
+  /* background-color: rgb(131, 23, 23); */
+  margin-top: 10px;
+  margin-left: 70px;
+  color: aliceblue;
+}
+#inner_con3 {
+  height: 430px;
+  width: 180px;
+  /* background-color: rgb(131, 23, 23); */
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.text01 {
+display: flex;
+margin-left: 70px;
+margin-top: 15px;
+font: 20px sans-serif;
+color: white;
+}
+#w1{
+ margin-left: 70px;
+ margin-top: 15px;
+ font: 20px sans-serif;
+  color: white;
+}
+#about button:hover{
+transform: scale(1.05);
+cursor: pointer;
+
+}
+#container5{
+    height: 700px;
+  /* background-color: blue; */
+  /* margin-top: 84px; */
+  background-image: url(Images/black-prism-concept-ai-generated.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}

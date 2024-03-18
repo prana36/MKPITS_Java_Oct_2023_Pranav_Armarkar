@@ -1,0 +1,1 @@
+const petrolPrice=1000;

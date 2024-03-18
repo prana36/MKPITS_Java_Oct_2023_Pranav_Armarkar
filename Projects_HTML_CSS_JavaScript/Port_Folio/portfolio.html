@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortFolio</title>
+    <link
+      rel="shortcut icon"
+      href="Images/icons8-male-profile-pic-16.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+    <style>
+      * {
+        margin: 0%;
+      }
+      #container {
+        height: 730px;
+        width: 100%;
+        background-color: blueviolet;
+        background-image: url(Images/black-prism-concept-ai-generated.jpg);
+        background-repeat: no-repeat;
+
+        background-size: cover;
+      }
+      #nav {
+        height: 70px;
+        /* background-color: black; */
+        display: flex;
+      }
+
+      .List {
+        display: flex;
+        list-style-type: none;
+        color: rgb(204, 223, 84);
+        /* float: right; */
+        margin-right: 20px;
+        margin-top: 30px;
+      }
+      li {
+        padding-left: 50px;
+        /* float: right; */
+      }
+
+      li:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+
+      .Mlist {
+        margin-left: 530px;
+      }
+      .cont {
+        height: 330px;
+        width: 330px;
+        color: rgb(112, 179, 238);
+        float: right;
+        border-radius: 50%;
+        margin-top: 50px;
+      }
+      .profile {
+        height: 330px;
+        margin-left: 430px;
+        border-radius: 50%;
+      }
+      .profile:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      .front {
+        display: flex;
+        /* background-color: black; */
+      }
+
+      .text1 {
+        margin-left: 140px;
+        margin-left: 140px;
+        color: white;
+        display: flex;
+        margin-top: 20px;
+        /* text-shadow: 2px 2px 2px rgb(19, 95, 202); */
+        font: 60px sans-serif;
+      }
+      .text2 {
+        display: flex;
+        margin-left: 140px;
+        margin-top: 15px;
+        font: 30px sans-serif;
+        color: white;
+      }
+      i {
+        color: green;
+      }
+
+      .imgres {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 130px;
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      .imgres a {
+        padding: 12px;
+        background-color: rgb(16, 193, 101);
+        color: aliceblue;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 20px;
+        margin-left: 70px;
+      }
+
+      .social_Media {
+        /* display: flex; */
+        float: right;
+        margin-right: 120px;
+        margin-top: 20px;
+      }
+
+      .social_Media img:hover {
+        transform: scale(1.5);
+      }
+      .logo {
+        width: 40px;
+        /* margin-top: 40px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="nav">
+        <div
+          style="
+            margin-left: 140px;
+            font-size: 50px;
+            color: rgb(204, 223, 84);
+            margin-top: 15px;
+          "
+        >
+          Portfolio.
+        </div>
+        <div class="Mlist">
+          <ul class="List">
+            <li>
+              <a
+                style="text-decoration: none; color: rgb(204, 223, 84)"
+                href=".front"
+              ></a
+              >HOME
+            </li>
+            <li>
+              <a
+                style="text-decoration: none; color: rgb(204, 223, 84)"
+                href="#container2"
+                >SKILLS</a
+              >
+            </li>
+            <li>PROJECTS</li>
+            <li>
+              <a
+                style="text-decoration: none; color: rgb(204, 223, 84)"
+                href="#contianer3"
+                >CONTACT</a
+              >
+            </li>
+            <li>
+              <a
+                style="text-decoration: none; color: rgb(204, 223, 84)"
+                href="#contianer4"
+                >ABOUT</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="front">
+        <div>
+          <div
+            style="
+              /* display: flex; */
+              margin-left: 140px;
+              padding-top: 70px;
+              color: white;
+              font: 27px sans-serif;
+            "
+          >
+            Hello ,my name is ...
+          </div>
+          <div class="text1">Pranav A. Armarkar</div>
+          <div class="text2">
+            And I'm a &nbsp;
+            <div class="element" style="display: flex"></div>
+          </div>
+
+          <div class="imgres">
+            <figure>
+              <img src="Images/icons8-resume-96.png" alt="" />
+              <figcaption
+                style="
+                  margin-left: 13px;
+                  font-size: 20px;
+                  color: rgb(204, 223, 84);
+                "
+              >
+                Resume
+              </figcaption>
+            </figure>
+            <a href="files/Resume.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="cont">
+          <img class="profile" src="Images/profile2.png" alt="" />
+        </div>
+      </div>
+
+      <div class="social_Media">
+        <figure>
+          <figcaption
+            style="
+              color: rgb(104, 96, 96);
+              margin-left: 60px;
+              font-size: 20px;
+              opacity: 50px;
+            "
+          >
+            Social Media
+          </figcaption>
+
+          <a
+            href="https://www.linkedin.com/in/pranav-armarkar-459677224/"
+            target="_blank"
+          >
+            <img
+              class="logo"
+              src="Images/icons8-linkedin-48.png"
+              alt="linkedin"
+          /></a>
+          <a href="" style="margin-left: 15px" target="_blank">
+            <img class="logo" src="Images/icons8-insta-48.png" alt="insta"
+          /></a>
+          <a
+            href="https://github.com/prana36"
+            style="margin-left: 15px"
+            target="_blank"
+          >
+            <img class="logo" src="Images/icons8-github-64.png" alt="github"
+          /></a>
+          <a href="" style="margin-left: 15px" target="_blank">
+            <img class="logo" src="Images/icons8-twitter-48.png" alt="twitter"
+          /></a>
+        </figure>
+      </div>
+    </div>
+    <div class="midcon"></div>
+
+    <div id="container2">
+      <div class="skills">
+        <h1>My Skills</h1>
+        <br />
+      </div>
+      <div class="Skills">
+        <span class="title">what i know</span>
+      </div>
+
+      <div id="inner_container">
+        <div id="inner_1">
+          <div class="skill">
+            <div class="name1">JAVA</div>
+            <span class="percentage"> 90% </span>
+          </div>
+          <div class="pro"><div class="progress"></div></div>
+
+          <div class="skill">
+            <div class="name1">HTML</div>
+            <span class="percentage"> 95% </span>
+          </div>
+          <div class="pro"><div class="progress1"></div></div>
+
+          <div class="skill">
+            <div class="name1">CSS</div>
+            <span class="percentage"> 85% </span>
+          </div>
+          <div class="pro"><div class="progress2"></div></div>
+
+          <div class="skill">
+            <div class="name1">JavaScript</div>
+            <span class="percentage"> 80% </span>
+          </div>
+          <div class="pro"><div class="progress3"></div></div>
+
+          <div class="skill">
+            <div class="name1">MySQL</div>
+            <span class="percentage"> 60% </span>
+          </div>
+          <div class="pro"><div class="progress4"></div></div>
+
+          <div class="skill">
+            <div class="name1">GIT</div>
+            <span class="percentage"> 99% </span>
+          </div>
+          <div class="pro"><div class="progress5"></div></div>
+
+          <div class="skill">
+            <div class="name1">MS Office</div>
+            <span class="percentage"> 50% </span>
+          </div>
+          <div class="pro"><div class="progress6"></div></div>
+        </div>
+
+        <div id="middle">
+          <div style="margin-top: 80px">
+            <img src="Images/icons8-java-188.png" alt="" />
+          </div>
+        </div>
+        <div id="inner_2">
+          <div class="Creative">My Creative Skills & Experiences.</div>
+          <p
+            style="
+              text-align: justify;
+              margin-top: 40px;
+              width: 510px;
+              overflow: hidden;
+              padding-left: 15px;
+              font: 15px sans-serif;
+              color: white;
+            "
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+            alias consectetur, eveniet veniam explicabo enim natus dignissimos
+            hic ullam error, nisi qui voluptatum, sapiente suscipit! Quae
+            voluptatibus nulla minima dolore. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. In numquam eos similique unde incidunt
+            magnam minus totam facilis minima dolorum consequuntur, quibusdam
+            accusamus illum dolor, cupiditate aut eaque commodi expedita. Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+            assumenda tenetur quas harum aperiam, consectetur eos, officia quo
+            molestias qui enim quos, omnis in natus. Velit quas voluptate
+            molestiae quisquam? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Delectus aliquam est explicabo ut quasi dolore
+            unde, maiores eligendi adipisci nihil excepturi temporibus quis
+            quibusdam sapiente consectetur beatae suscipit vel voluptas. Lorem
+            ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+            dolorum iusto nulla atque autem unde ratione, eum sed, deleniti
+            eveniet ullam delectus soluta veniam ipsa esse vero eligendi nihil
+            rerum!
+          </p>
+          <a href="" style="float: inline-end; padding-right: 20px">
+            Read More</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="midcon"></div>
+
+    <div id="contianer3">
+      <div class="skills">
+        <h1>Contact Me</h1>
+        <br />
+      </div>
+      <div class="Skills">
+        <span class="title">get in touch</span>
+      </div>
+      <div class="inner_container1">
+        <div class="innercon1">
+          <div
+            style="
+              font: 20px poppins, sans-serif;
+              color: rgb(255, 106, 0);
+              padding-left: 15px;
+            "
+          >
+            Get in Touch
+          </div>
+          <p
+            style="
+              text-align: justify;
+              margin-top: 20px;
+              width: 550px;
+              overflow: hidden;
+              padding-left: 15px;
+              font: 15px sans-serif;
+              color: white;
+            "
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+            amet nobis quaerat tenetur officia, debitis perferendis beatae odio
+            nemo itaque minus minima quia optio. Minus voluptatum molestias
+            quibusdam nihil error! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Assumenda id dolorem eveniet doloribus laboriosam
+            optio.
+          </p>
+          <div class="acc">
+            <img src="Images/icons8-account-50.png" alt="" />
+            <div style="margin-left: 10px">
+              <div style="font: 18px sans-serif; color: rgb(255, 106, 0)">
+                Name
+              </div>
+              <div style="font: sans-serif; color: white">
+                Pranav Arvind Armarkar
+              </div>
+            </div>
+          </div>
+
+          <div class="acc">
+            <img src="Images/icons8-location-50.png" alt="" />
+            <div style="margin-left: 10px">
+              <div style="font: 18px sans-serif; color: rgb(255, 106, 0)">
+                Address
+              </div>
+              <div style="font: sans-serif; color: white">
+                Koradi, Nagpur-441113
+              </div>
+            </div>
+          </div>
+          <div class="acc">
+            <img src="Images/icons8-email-50.png" alt="" />
+            <div style="margin-left: 10px">
+              <div style="font: 18px sans-serif; color: rgb(255, 106, 0)">
+                Email
+              </div>
+              <div style="font: sans-serif; color: white">
+                pranavarmarkar03@gmail.com
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="innercon2">
+          <div id="reg1">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+          </div>
+          <input class="sub" type="text" placeholder="subject" />
+          <textarea
+            style="
+              margin-top: 30px;
+              margin-left: 10px;
+              border: 2px solid gray;
+              border-radius: 10px;
+              background-color: rgb(192, 191, 191);
+              font-size: 20px;
+            "
+            name=""
+            id=""
+            cols="56"
+            rows="6"
+            placeholder="message"
+          ></textarea>
+          <!-- <input class="message" type="text" placeholder="Message" /> -->
+          <div class="butt">
+            <button><a style="color: white" href="">send message</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="midcon"></div>
+
+    <div id="contianer4">
+      <div class="skills">
+        <h1>About Me</h1>
+        <br />
+      </div>
+      <div class="Skills">
+        <span class="title">Who i am</span>
+      </div>
+
+      <div class="about">
+        <div id="inner_con1"></div>
+
+        <div id="inner_con2">
+          <div class="text01">
+            I am Pranav Armarkar And I'm a &nbsp;
+            <div class="element1"></div>
+          </div>
+          <div id="w1">From Nagpur.....</div>
+          <p
+            style="
+              text-align: justify;
+              margin-top: 40px;
+              width: 510px;
+              overflow: hidden;
+              padding-left: 70px;
+              font: 15px sans-serif;
+              color: white;
+            "
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+            eaque obcaecati provident excepturi ducimus veritatis eius officiis
+            maxime incidunt cupiditate deleniti sapiente. Neque veniam id
+            dolores quidem impedit, asperiores est! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Exercitationem omnis in hic
+            perferendis dolor? Quo earum, laboriosam ratione veritatis porro
+            accusantium iste? Nam rerum perspiciatis quod iure ut, sapiente est?
+            <a href="#">Read more</a>
+          </p>
+          <button
+            style="
+              font: 30px sans-serif;
+              background-color: rgb(255, 106, 0);
+              border-radius: 15px;
+              margin-top: 127px;
+              margin-left: 260px;
+              animation: progress1 4s;
+              display: flex;
+            "
+          >
+            <a
+              style="text-decoration: none; color: rgb(253, 251, 251)"
+              href="https://drive.google.com/file/d/1QiWbl1qj2VV6nxcOXdyNO-QAPdjv2bvI/view?usp=sharing"
+            >
+              Download CV</a
+            >
+          </button>
+        </div>
+
+        <div id="inner_con3">
+          <button
+            style="
+              font: 25px sans-serif;
+              background-color: rgb(255, 106, 0);
+              border-radius: 15px;
+              margin-top: 90px;
+              animation: progress1 4s;
+              /* display: flex; */
+            "
+          >
+            <a style="text-decoration: none; color: rgb(253, 251, 251)" href="">
+              Education</a
+            >
+          </button>
+          <!-- <button style="font :25px sans-serif ; background-color: rgb(6, 0, 0); border-radius: 15px; margin-top: 30px; "><a style="text-decoration: none; color: rgb(253, 251, 251);" href="files/Resume.pdf"> Skills</a></button> -->
+          <button
+            style="
+              font: 25px sans-serif;
+              background-color: rgb(255, 106, 0);
+              border-radius: 15px;
+              margin-top: 90px;
+              animation: progress1 4s;
+              /* display: flex; */
+            "
+          >
+            <a style="text-decoration: none; color: rgb(253, 251, 251)" href="">
+              Experience</a
+            >
+          </button>
+        </div>
+      </div>
+    </div >
+    <div class="midcon"></div>
+    
+  
+    <div id="container5">
+      <div class="skills">
+        <h1>Project</h1>
+        <br />
+      </div>
+      <div class="Skills">
+        <span class="title">What i have done</span>
+      </div>
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed(".element", {
+        strings: ["<i> Full Stack Developer</i> . "],
+        typeSpeed: 30,
+        loop: true,
+      });
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed(".element1", {
+        strings: ["<i> Full Stack Developer</i> . "],
+        typeSpeed: 30,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
