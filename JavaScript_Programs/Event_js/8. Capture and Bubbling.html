@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<l>
+
+<head>
+	<title>Technocrats Solutions</title>
+	<style>
+		#one {
+			width: 400px;
+			height: 400px;
+			background-color: orange;
+		}
+
+		#two {
+			width: 300px;
+			height: 300px;
+			background-color: lightblue;
+		}
+
+		#three {
+			width: 200px;
+			height: 300px;
+			background-color: pink;
+		}
+
+		#four {
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+
+<bodyl>
+
+	<h1>Event Capture and Bubbling</h1>
+	<div id="one"> 1
+		<div id="two"> 2
+			<div id="three"> 3
+				<div id="four"> 4
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Bubbling Phase
+		document.getElementById("one").addEventListener("click", ()=> { console.log("1");},false);
+		document.getElementById("two").addEventListener("click", ()=> { console.log("2");},false);
+        document.getElementById("three").addEventListener("click", ()=> { console.log("3");},false);
+		document.getElementById("four").addEventListener("click", ()=> { console.log("4");},false);
+
+		// Capture Phase
+		// document.getElementById("one").addEventListener("click", ()=> { console.log("1"); }, true);
+		// document.getElementById("two").addEventListener("click", () =>{ console.log("2"); }, true);
+		// document.getElementById("three").addEventListener("click", ()=> { console.log("3"); }, true);
+		// document.getElementById("four").addEventListener("click", ()=> { console.log("4"); }, true);
+	</script>
+</bodyl>
+
+
+<!-- 
+	Bubbling 
+Bubbling is a mechanism in JavaScript that allows an event to propagate up through the DOM tree. 
+When an event is triggered on an element, it first fires on that element, then on its parent element,
+ then on its parent's parent element, and so on, until it reaches the document object.
+This allows you to handle events on parent elements without having to attach event listeners to every child element. 
+For example, you could attach a click event listener to the document object and handle all clicks on any element in the document, 
+regardless of where they occur.
+To stop bubbling, you can use the stopPropagation() method. This method prevents the event from propagating up the DOM tree.
+
+<div id="container">
+  <button>Click me!</button>
+</div>
+
+document.addEventListener('click', function(event) {
+  // This function will be called when any element in the document is clicked.
+  console.log('You clicked on an element!');
+}, false);
+-->
+
+
+
+
+
+
+<!-- 
+	capture Phase
+The capturing phase is the first phase of the event propagation process in JavaScript. During this phase, 
+the event is passed down from the document object to the target element. 
+Any event listeners that have been attached to elements in the capturing phase will be triggered before the event reaches the target element.
+The capturing phase is rarely used in real code, but it can be useful in some cases. For example, 
+you might use the capturing phase to prevent an event from reaching the target element. 
+You could do this by adding an event listener to a parent element that cancels the event.
+To add an event listener to the capturing phase, you need to use the third parameter of the addEventListener() method. 
+This parameter is a boolean value that indicates whether the event listener should be triggered in the capturing phase. 
+If the value is true, the event listener will be triggered in the capturing phase. If the value is false, 
+the event listener will be triggered in the bubbling phase.
+Here is an example of how to add an event listener to the capturing phase:
+
+
+JavaScript
+document.addEventListener('click', function(event) {
+  // This event listener will be triggered in the capturing phase.
+}, true);
+
+
+This event listener will be triggered whenever a click event occurs on any element in the document. 
+The event listener will be triggered before the click event reaches the target element.
+The capturing phase can be a useful tool for controlling the flow of events in your JavaScript applications. 
+By understanding how the capturing phase works, you can write more efficient and effective code. -->
