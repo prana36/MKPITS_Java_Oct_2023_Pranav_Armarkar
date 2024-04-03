@@ -1,0 +1,71 @@
+body {
+  /* background-image: url(index_Images/andrey-metelev-DEuansgqjns-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+h1{
+  text-align: center;
+}
+#container {
+  margin-left: 10px;
+  width: 800px;
+  height: 570px;
+  display: grid;
+  grid-template-columns: repeat(10 ,1fr) ;
+  gap: 1px;
+  margin-left: 25%;
+}
+#container > div {
+  width: 60px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  background-image: url(index_Images/erik-mclean-C3T8KTZxTFM-unsplash\ \(1\).jpg);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  font-size: 30px;
+  padding: 20px 0;
+  color: rgb(195, 48, 48);
+}
+#container > div:hover{
+  transform: scale(1.2);
+  background-color: chocolate;
+  cursor: pointer;
+}
+
+#refresh {
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 100px;
+}
+#player{
+  display: flex;
+}
+#Reset{
+  margin-left: 50%;
+}
+#Reset > button{
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: rgb(33, 210, 56);
+  color: white;
+
+}
+#Reset > button:hover{
+   transform: scale(1.2);
+  background-color: rgb(166, 4, 4);
+  
+  cursor: pointer;
+}
+#player >input{
+  width: 200px;
+  height:  40px;
+}
+#timer{
+  margin-left: 70%;
+  font-size: 20px;
+}

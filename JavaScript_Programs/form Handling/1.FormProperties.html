@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Properties</title>
+</head>
+<body>
+    <form action="" name="myform" id="myformid">
+        User_Id : <input type="text" name="m_userId_field" id="userid"><br><br>
+        Password : <input type="password" name="m_passwd_field" id="passwd"><br><br>
+        <input type="button" name="m_sbtn" value="Rest" onclick="reset()">
+    </form>
+    <script>
+        let myform = document.myform;
+        console.dir(myform);
+        console.log(myform.length);
+        console.log(myform.elements[1]);
+        console.log(myform.method);
+        console.log(myform.action);
+
+        resetFunc=()=>{
+            myform.reset();
+        }
+    </script>
+
+</body>
+</html>

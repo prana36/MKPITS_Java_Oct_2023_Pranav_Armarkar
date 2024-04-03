@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Form</title>
+</head>
+<body>
+    <form action="">
+        User_Id : <input type="text" name="m_userId_field" id="userid"><br><br>
+        Password : <input type="password" name="m_passwd_field" id="passwd"><br><br>
+        <input type="submit" name="m_sbtn" value="Submit" >
+    </form>
+    <hr>
+    <hr>
+    <form action="" name="yourform" id="yourformid">
+        User_Id : <input type="text" name="y_userId_field" id="userid"><br><br>
+        Password : <input type="password" name="y_passwd_field" id="passwd"><br><br>
+        <input type="submit" name="m_sbtn" value="Submit" >
+    </form>
+
+    <script>
+     			// With Index Number
+				// var mform = document.forms[0];
+				// console.log(mform);
+		
+				// var yform = document.forms[1];
+				// console.log(yform);
+
+		
+				// With Name attribute using square bracket
+				var mform = document.forms['myform'];
+				console.log(mform);
+		
+				var yform = document.forms['yourform'];
+				console.log(yform);
+		
+		/*
+				// With Name attribute using dot
+				var mform = document.myform;
+				console.log(mform);
+		
+				var yform = document.yourform;
+				console.log(yform);
+		*/
+
+		/*
+				// With getElementById
+				var mform = document.getElementById("myformid");
+				console.log(mform);
+
+				var yform = document.getElementById("yourformid");
+				console.log(yform);
+		*/
+
+    </script>
+    
+</body>
+</html>
