@@ -1,0 +1,26 @@
+#header {
+  width: 700px;
+  height: 150px;
+  background-color: rgb(113, 12, 12);
+  margin-left: 400px;
+}
+#header > h3 {
+  margin-left: 250px;
+}
+#start {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 280px;
+  margin-top: 5px;
+}
+#Name > input {
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 20px;
+  margin-left: 230px;
+}
+#input1 {
+  display: flex;
+}

@@ -11,21 +11,16 @@
     <div id="Player">
       <h1>Welcome To Game</h1>
       <input type="text" name="" id="Name" placeholder="Player Name" />
-      <div id="timer">05:00</div>
-      <br/>
+      <div id="timer" onclick="location.reload()">05:00</div>
+      <br />
 
-      <button onclick="start()"> Start Game!</button>
+      <button onclick="start()">Start Game!</button>
+    </div>
 
-      <div id="container">
-        
-      </div>
+    <div id="container"></div>
 
-      <div id="Reset" >
-        <button type="reset" >
-          Refresh
-        </button>
-      </div>
-      
+    <div id="Reset">
+      <button type="reset" onclick="start()">Refresh</button>
     </div>
   </body>
 </html>

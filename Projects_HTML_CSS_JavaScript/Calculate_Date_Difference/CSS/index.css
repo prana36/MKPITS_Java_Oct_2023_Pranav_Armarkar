@@ -1,0 +1,41 @@
+*{
+    align-items: center;
+}
+
+#div0{
+    border-style: solid;
+    background-color: rgba(184, 185, 186, 0.558);
+    border-radius: 15px;
+}
+#div1{
+    align-content: center;
+    margin-left: 40%;
+    width: 50%;
+    border: 10px;
+
+}
+
+
+#h41{
+ text-align: center;
+ margin-left: 50px;
+}
+#h42{
+ text-align: center;
+}
+#div2{
+    align-items: center;
+    margin-left: 500px;
+    width: 40%;
+    border-style: solid;
+}
+
+#checkbox{
+    align-items: center;
+}
+
+#output{
+    align-items: center;
+    margin-left: 43%;
+    width: 50%;
+}

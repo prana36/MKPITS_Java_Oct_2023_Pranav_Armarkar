@@ -40,3 +40,7 @@ window.onload = function () {
     display = document.querySelector("#timer");
   startTimer(fiveMinutes, display);
 };
+// function refresh() {
+//   startTimer(duration, display);
+//   // location.reload();
+// }
