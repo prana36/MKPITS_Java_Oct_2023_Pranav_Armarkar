@@ -48,11 +48,51 @@ private StudentDbUtility studentDbUtility;
 		// TODO Auto-generated method stub
 
 		try {
+			
+			//read the "command" parameter
+			String theCommand = request.getParameter("command");
+			
+			//if the command is missing, then default to listing student
+			
+			if(theCommand == null) {
+				theCommand = "LIST";
+			}
+			
+			//route to the appropriate method
+			switch (theCommand) {
+			case "LIST" : 
+				listStudents(request,response);
+				break;
+			case "ADD" :
+				addStudent(request,response);
+				break;
+			default:
+				listStudents(request,response);
+			}
+			
 			listStudents(request, response);
 		} catch (Exception e) {
 			// TODO: handle exception
 			throw new ServletException();
 		}
+	}
+
+	private void addStudent(HttpServletRequest request, HttpServletResponse response)throws Exception {
+		//read student data from form
+				String firstName = request.getParameter("firstName");
+				String lastName = request.getParameter("lastName");
+				String email = request.getParameter("email");
+				
+				// create new Student_Model object
+				Student_Model theStudent = new Student_Model(firstName, lastName, email);
+				
+				////add student to the database
+				studentDbUtility.addStudent(theStudent);
+				
+				//send back to main page (the student list)
+				listStudents(request, response);
+
+		
 	}
 
 	private void listStudents(HttpServletRequest request, HttpServletResponse response)

@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@page import="com.mkpits.jdbc1.Student_Model"%>
 <%@page import="java.util.List"%>
@@ -9,7 +9,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student Tracker App</title>
-<link type= "text/css" rel= "stylesheet" href= "css/add-student-style"></link>
+<link type= "text/css" rel= "stylesheet" href= "css/style.css"></link>
+
 </head>
 <%//get the student the RequestDispatcher
 List<Student_Model> theStudents =(List<Student_Model>)request.getAttribute("STUDENT_LIST");
@@ -32,18 +33,14 @@ List<Student_Model> theStudents =(List<Student_Model>)request.getAttribute("STUD
         <th>Email</th>
      </tr>
      
-    <%
-      for (Student_Model tempStudent : theStudents){
- %>
+    <c:forEach var="tempStudent" items="${STUDENT_LIST}">
     <tr>
-       <td><%=tempStudent.getId()%></td>
-       <td><%=tempStudent.getFirstName()%></td>
-       <td><%=tempStudent.getLastName()%></td>
-       <td><%=tempStudent.getEmail()%></td>
+       <td>${tempStudent.id}</td>
+       <td>${tempStudent.firstName}</td>
+       <td>${tempStudent.lastName}</td>
+       <td>${tempStudent.email}</td>
    </tr>
- <%
- }
- %>
+    </c:forEach>
  
    </table>
   </div>

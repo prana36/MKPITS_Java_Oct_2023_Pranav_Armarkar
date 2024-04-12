@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Form</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"></link>
+<link type="text/css" rel="stylesheet" href="css/add-student-style.css"></link>
 </head>
 <body>
 
@@ -27,7 +29,7 @@
 				</tr>
 				<tr>
 					<td><label>Last Name: </label></td>
-					<td><input type="text" name="LastName" /></td>
+					<td><input type="text" name="lastName" /></td>
 				</tr>I
 				<tr>
 				    <td><label>Email</label></td>
