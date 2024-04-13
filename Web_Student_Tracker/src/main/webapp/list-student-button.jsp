@@ -34,14 +34,29 @@ List<Student_Model> theStudents =(List<Student_Model>)request.getAttribute("STUD
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
+        <th>Action</th>
      </tr>
      
   <c:forEach var="tempStudent" items="${STUDENT_LIST}">
+      <!--set up a link link for each student  -->
+       <c:url var="tempLink" value="StudentControllerServletNew">
+       <c:param name="command" value="LOAD"/>
+       <c:param name="studentId" value="${tempStudent.id}"/>
+       </c:url>
+       
+       <!--set up a link link for each student  -->
+       <c:url var="deleteLink" value="StudentControllerServletNew">
+       <c:param name="command" value="DELETE"/>
+       <c:param name="studentId" value="${tempStudent.id}"/>
+       </c:url>
     <tr>
        <td>${tempStudent.id}</td>
        <td>${tempStudent.firstName}</td>
        <td>${tempStudent.lastName}</td>
        <td>${tempStudent.email}</td>
+       <td><a href="${tempLink }">Update</a>/<a href="${deleteLink}" onclick="if(!(confirm('do you want to delete student ?'))) return false">Delete</a>
+       
+       </td>
    </tr>
     </c:forEach>
  
