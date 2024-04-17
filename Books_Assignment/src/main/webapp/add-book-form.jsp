@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link type="text/css" rel="stylesheet" href="css/style.css"></link>
-<link type="text/css" rel="stylesheet" href="css/add-student-style.css"></link>
+<title>ADD</title>
+
+<link type="text/css" rel="stylesheet" href="css/add-book-style.css"></link>
 </head>
 <body>
 
@@ -33,7 +33,7 @@
 				</tr>
 				<tr>
 				    <td><label>Date</label></td>
-	                <td><input type="date" name="date"/></td>
+	                <td><input type="text" name="date"/></td>
 	            </tr>
 	            <tr>
 					<td><label>Genres: </label></td>
@@ -55,7 +55,7 @@
 	</form>
 	
 	<div style="clear:both;"></div>
-	   <p><a href="StudentControllerServletNew">Back To List</a></p>
+	   <p><a href="BooksControllerServlet">Back To List</a></p>
 </div>
 
 </body>
