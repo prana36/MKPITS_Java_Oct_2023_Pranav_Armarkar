@@ -1,7 +1,7 @@
-package com.mkpits.books;
+package com.mkpits.jdbc;
 
-public class BooksModel 
-{
+public class Books_Model {
+
 	private int id;
 	private String title;
 	private String author;
@@ -9,26 +9,24 @@ public class BooksModel
 	private String genres;
 	private String characters;
 	private String synopsis;
-	public BooksModel(int id, String title,String author, String date, String genres, String characters, String synopsis) {
-		super();
+	public Books_Model(int id, String title, String author, String date, String genres, String characters,
+			String synopsis) {
 		this.id = id;
 		this.title = title;
-		this.author=author;
+		this.author = author;
 		this.date = date;
 		this.genres = genres;
 		this.characters = characters;
 		this.synopsis = synopsis;
 	}
-	public BooksModel(String title, String author,String date, String genres, String characters, String synopsis) {
-		super();
+	public Books_Model(String title, String author, String date, String genres, String characters, String synopsis) {
 		this.title = title;
-		this.author=author;
+		this.author = author;
 		this.date = date;
 		this.genres = genres;
 		this.characters = characters;
 		this.synopsis = synopsis;
 	}
-	
 	public int getId() {
 		return id;
 	}
@@ -41,8 +39,6 @@ public class BooksModel
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
-	
 	public String getAuthor() {
 		return author;
 	}
@@ -73,7 +69,10 @@ public class BooksModel
 	public void setSynopsis(String synopsis) {
 		this.synopsis = synopsis;
 	}
+	@Override
+	public String toString() {
+		return "Books_Model [id=" + id + ", title=" + title + ", author=" + author + ", date=" + date + ", genres="
+				+ genres + ", characters=" + characters + ", synopsis=" + synopsis + "]";
+	}
 	
-	
-
 }

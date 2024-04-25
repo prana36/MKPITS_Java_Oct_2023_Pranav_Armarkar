@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 .container {
-  width: 100%;
-  height: 100vh;
+  width: 50%;
+  height: 50vh;
   background: linear-gradient(45deg, #410358, #4700bc);
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@
 .pagination {
   display: flex;
   align-items: center;
-  color: #fff;
+  background-color: #fff;
   color: #383838;
   padding: 10px 40px;
   border-radius: 6px;
@@ -26,7 +26,7 @@ ul {
 ul li {
   display: inline-block;
   margin: 0 10px;
-  background: #ccc;
+
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -34,6 +34,8 @@ ul li {
   font-size: 22px;
   line-height: 45px;
   cursor: pointer;
+  background-position: 0 -45px;
+  transition: background-position 0.5s;
 }
 .btn1,
 .btn2 {
@@ -46,4 +48,19 @@ ul li {
   outline: none;
   border: none;
   cursor: pointer;
+}
+.btn1 img {
+  width: 24px;
+  margin-right: 10px;
+}
+.btn2 img {
+  width: 24px;
+  margin-left: 10px;
+  transform: rotate(180deg);
+}
+ul li.active {
+  color: #fff;
+  background-image: linear-gradient(#ff4568, #ff4568);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
