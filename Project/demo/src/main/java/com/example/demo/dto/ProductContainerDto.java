@@ -4,13 +4,14 @@ import java.util.List;
 
 public class ProductContainerDto
 {
-    private List<ProductDto> productContainer;
+    // Create list type of variable which can Store no. of product In list format
+    private List<ProductDto> products;
 
-    public List<ProductDto> getProductContainer() {
-        return productContainer;
+    public List<ProductDto> getProducts() {
+        return products;
     }
 
-    public void setProductContainer(List<ProductDto> productContainer) {
-        this.productContainer = productContainer;
+    public void setProducts(List<ProductDto> products) {
+        this.products = products;
     }
 }
