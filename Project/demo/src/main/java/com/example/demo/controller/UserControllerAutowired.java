@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.UserDto;
+import com.example.demo.dto.UserDemoDto;
 import com.example.demo.service.IUserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +16,11 @@ public class UserControllerAutowired {
 
     @RequestMapping("/v1/user/autowired")
     public ResponseEntity<Object> getUserFromAutowired(){
-        UserDto userDtoByAutowired = userServiceAutowired.getAllUsers();
+        UserDemoDto userDemoDtoByAutowired = userServiceAutowired.getAllUsers();
 
         System.out.println("Autowired EMP Service: "+userServiceAutowired.hashCode());
 
-        return ResponseEntity.ok(userDtoByAutowired);
+        return ResponseEntity.ok(userDemoDtoByAutowired);
     }
 
 }

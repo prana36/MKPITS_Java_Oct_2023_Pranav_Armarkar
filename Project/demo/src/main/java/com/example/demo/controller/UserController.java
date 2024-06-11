@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.UserDto;
-import com.example.demo.service.impl.UserService;
+import com.example.demo.dto.UserDemoDto;
+import com.example.demo.service.impl.UserDemoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    UserService userServiceConstructor = new UserService();
-    public UserController(UserService userServiceConstructor) {
-        this.userServiceConstructor = userServiceConstructor;
+    UserDemoService userDemoServiceConstructor = new UserDemoService();
+    public UserController(UserDemoService userDemoServiceConstructor) {
+        this.userDemoServiceConstructor = userDemoServiceConstructor;
     }
 
-    UserService userServiceSetter = new UserService();
+    UserDemoService userDemoServiceSetter = new UserDemoService();
 
-    public void setUserServiceSetter(UserService userServiceSetter) {
-        this.userServiceSetter = userServiceSetter;
+    public void setUserServiceSetter(UserDemoService userDemoServiceSetter) {
+        this.userDemoServiceSetter = userDemoServiceSetter;
     }
 
 
@@ -26,17 +26,17 @@ public class UserController {
 
     @RequestMapping("/v1/user/constructor")
     public ResponseEntity<Object> getUserFromConstructor(){
-        UserDto userDtoByConstructor = userServiceConstructor.getAllUsers();
+        UserDemoDto userDemoDtoByConstructor = userDemoServiceConstructor.getAllUsers();
 
-        System.out.println("Constructor EMP Service: "+userServiceConstructor.hashCode());
+        System.out.println("Constructor EMP Service: "+ userDemoServiceConstructor.hashCode());
 
-        return ResponseEntity.ok(userDtoByConstructor);
+        return ResponseEntity.ok(userDemoDtoByConstructor);
     }
     @RequestMapping("/v1/user/setter")
     public ResponseEntity<Object> getUserFromSetter(){
 
-        UserDto userDtoBySetter = userServiceSetter.getAllUsers();
-        System.out.println("Setter EMP Service: "+userServiceSetter.hashCode());
-        return ResponseEntity.ok(userDtoBySetter);
+        UserDemoDto userDemoDtoBySetter = userDemoServiceSetter.getAllUsers();
+        System.out.println("Setter EMP Service: "+ userDemoServiceSetter.hashCode());
+        return ResponseEntity.ok(userDemoDtoBySetter);
     }
 }

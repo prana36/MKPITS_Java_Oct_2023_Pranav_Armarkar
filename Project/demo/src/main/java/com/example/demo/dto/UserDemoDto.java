@@ -1,12 +1,12 @@
 package com.example.demo.dto;
 
-public class UserDto
+public class UserDemoDto
 {
     private long id ;
     private String name;
     private int age;
 
-    public UserDto() {
+    public UserDemoDto() {
 
     }
 

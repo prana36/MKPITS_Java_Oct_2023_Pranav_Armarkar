@@ -2,20 +2,19 @@ package com.example.demo.mysql.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Setter // this Annotation will be generated  The setter method .
 @Getter // this Annotation will be generated  The getter method
 @NoArgsConstructor // this Annotation will be generated  The No Arguments constructor
 @AllArgsConstructor // this Annotation will be generated  The  Arguments constructor
+@Builder
 @Entity
 @Table(name = "user_details")
-public class UserDbModel
+public class UserModel
 {
     @Id // Id is Primary Key That's Why This Annotation is declared.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +30,7 @@ public class UserDbModel
     @Column(name = "last_name")  //this annotation is used to  specify the below variable having name in dataBase Column is last_name.
     private String lastName ;
 
+
     @Column(name = "mobile") //this annotation is used to  specify the below variable having name in dataBase Column is mobile.
     private String mobile;
 
@@ -38,7 +38,7 @@ public class UserDbModel
     private String email;
 
     @Column(name = "date_of_birth") //this annotation is used to  specify the below variable having name in dataBase Column is date_of_birth.
-    private String dateOfBirth;
+    private LocalDate dateOfBirth;
 
     @Column(name = "adhaar_no") //this annotation is used to  specify the below variable having name in dataBase Column is adhaar_no.
     private String  adhaarNo;

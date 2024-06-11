@@ -9,6 +9,7 @@ CREATE TABLE user_details (
     first_name VARCHAR(30) NOT NULL COMMENT 'First name of the user',
     middle_name VARCHAR(30) NOT NULL COMMENT 'Middle name of the user',
     last_name VARCHAR(30) NOT NULL COMMENT 'Last name of the user',
+    user_name VARCHAR(20) NOT NULL COMMENT 'User_name of the user',
     mobile VARCHAR(14) UNIQUE NOT NULL COMMENT 'Mobile number of the user - 10 digit no + county code',
     email VARCHAR(50) UNIQUE NOT NULL COMMENT 'Email id of the user',
     date_of_birth VARCHAR(10) NOT NULL COMMENT 'Date Of Birth Of the User',
