@@ -1,7 +1,9 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.dto.request.UserRequestDto;
-import com.example.demo.dto.response.UserResponseDto;
+import com.example.demo.dto.response.UserGetResponseDto;
+import com.example.demo.dto.response.UserPostResponseDto;
+import com.example.demo.dto.response.UserUpdateResponseDto;
 import com.example.demo.mysql.model.UserCredential;
 import com.example.demo.mysql.model.UserModel;
 import com.example.demo.repository.UserCredentailsRepository;
@@ -30,33 +32,48 @@ public class UserService implements IUserServices
     UserCredentailsRepository userCredentialRepository;
 
     @Override
-    public UserRequestDto getUserById(Integer id) {
+    public UserGetResponseDto getUserById(Integer id) {
 
-        Optional<UserModel> userDbModel = userRepository.findById(id);
-        UserRequestDto userRequestDto = new UserRequestDto();
-        if (userDbModel.isPresent()){
-            userRequestDto = convertUserModelToUserDto(userDbModel.get());
+        Optional<UserModel> userModel = userRepository.findById(id);
+        UserGetResponseDto userGetResponseDto = new UserGetResponseDto();
+        if (userModel.isPresent()){
+
+            userGetResponseDto = convertUserModelToUserGetResponseDto(userModel.get());
         }
 
-        return userRequestDto;
+        return userGetResponseDto;
     }
-
-
 
     @Override
-    public List<UserRequestDto> getAllUsers() {
+    public List<UserGetResponseDto> getAllUsers() {
         List<UserModel> userModelList = (List<UserModel>) userRepository.findAll();
-        List<UserRequestDto> userRequestDtoList = new ArrayList<>();
+        List<UserGetResponseDto> userGetResponseDtoList = new ArrayList<>();
         for(UserModel userModel: userModelList){
-            UserRequestDto userRequestDto = convertUserModelToUserDto(userModel);
-            userRequestDtoList.add(userRequestDto);
+            UserGetResponseDto userGetResponseDto = convertUserModelToUserGetResponseDto(userModel);
+            userGetResponseDtoList.add(userGetResponseDto);
         }
-        return userRequestDtoList;
+        return userGetResponseDtoList;
     }
 
+    private UserGetResponseDto convertUserModelToUserGetResponseDto(UserModel userModel) {
+
+        UserGetResponseDto userGetResponseDto = UserGetResponseDto.builder()
+                .firstName(userModel.getFirstName())
+                .middleName(userModel.getMiddleName())
+                .lastName(userModel.getLastName())
+                .mobile(userModel.getMobile())
+                .email(userModel.getEmail())
+                .dateOfBirth(userModel.getDateOfBirth())
+                .adhaarNo(userModel.getAdhaarNo())
+                .gender(userModel.getGender())
+                .build();
+
+        return userGetResponseDto;
+    }
+    
     @Override
     @Transactional
-    public UserResponseDto createUser(UserRequestDto userRequestDto) {
+    public UserPostResponseDto createUser(UserRequestDto userRequestDto) {
         UserModel userModel = new UserModel();
         userModel = convertUserDtoToUserModel(userRequestDto, userModel);
         userModel.setCreatedBy(1);
@@ -81,16 +98,15 @@ public class UserService implements IUserServices
         userCredential.setUpdatedAt(LocalDateTime.now());
         userCredentialRepository.save(userCredential);
 
-        UserResponseDto userResponseDto = new UserResponseDto();
-        userResponseDto.setId(userModel.getId());
-        userResponseDto.setUserName(userCredential.getUserName());
-        userResponseDto.setFirstName(userModel.getFirstName());
-        userResponseDto.setMiddleName(userModel.getMiddleName());
-        userResponseDto.setLastName(userModel.getLastName());
+        UserPostResponseDto userPostResponseDto = new UserPostResponseDto();
+        userPostResponseDto.setId(userModel.getId());
+        userPostResponseDto.setUserName(userCredential.getUserName());
+        userPostResponseDto.setFirstName(userModel.getFirstName());
+        userPostResponseDto.setMiddleName(userModel.getMiddleName());
+        userPostResponseDto.setLastName(userModel.getLastName());
 
-        return userResponseDto ;
+        return userPostResponseDto;
     }
-
 
     @Override
     public UserRequestDto updateUser(UserRequestDto userRequestDto) {
@@ -104,18 +120,17 @@ public class UserService implements IUserServices
             userModel =userRepository.save(userModel);
             return convertUserModelToUserDto(userModel);
         }
+
+
         return userRequestDto;
     }
-
 
     @Override
     public UserRequestDto updatePartialUser(UserRequestDto userRequestDto) {
         Optional<UserModel> optionalUserModel = userRepository.findById(userRequestDto.getId());
         if (optionalUserModel.isEmpty()){
             System.out.println("User data with id: "+ userRequestDto.getId() +"not found");
-
         }else {
-
             // Assigning  the data of optionalUserModel
             UserModel userModel = optionalUserModel.get();
 
@@ -138,6 +153,22 @@ public class UserService implements IUserServices
         return userRequestDto;
     }
 
+    // do it later
+//    private UserUpdateResponseDto convertUserModelToUserUpdateResponseDto(UserModel userModel) {
+//
+//        UserUpdateResponseDto userUpdateResponseDto = UserUpdateResponseDto.builder()
+//                .firstName(userModel.getFirstName())
+//                .middleName(userModel.getMiddleName())
+//                .lastName(userModel.getLastName())
+//                .mobile(userModel.getMobile())
+//                .email(userModel.getEmail())
+//                .dateOfBirth(userModel.getDateOfBirth())
+//                .adhaarNo(userModel.getAdhaarNo())
+//                .gender(userModel.getGender())
+//                .build();
+//        return userUpdateResponseDto;
+//    }
+
     @Override
     public UserRequestDto deleteUser(Integer id) {
 
@@ -156,18 +187,6 @@ public class UserService implements IUserServices
     }
 
     private UserModel convertUserDtoToUserModel(UserRequestDto userRequestDto, UserModel userModel) {
-//        UserDbModel userDbModel =new UserDbModel();
-//        userModel.setFirstName(userRequestDto.getFirstName());
-//        userModel.setMiddleName(userRequestDto.getMiddleName());
-//        userModel.setLastName(userRequestDto.getLastName());
-//
-//        userModel.setMobile(userRequestDto.getMobile());
-//        userModel.setEmail(userRequestDto.getEmail());
-//        userModel.setDateOfBirth(userRequestDto.getDateOfBirth());
-//        userModel.setAdhaarNo(userRequestDto.getAdhaarNo());
-//        userModel.setGender(userRequestDto.getGender());
-//        userModel.setUpdatedBy(1);
-//        userModel.setUpdatedAt(LocalDateTime.now());
 
         userModel = UserModel.builder()
                 .firstName(userRequestDto.getFirstName())
@@ -187,24 +206,17 @@ public class UserService implements IUserServices
 
     private UserRequestDto convertUserModelToUserDto(UserModel userModel) {
 //        UserRequestDto userRequestDto =new UserRequestDto();
-
         UserRequestDto  userRequestDto = UserRequestDto.builder()
-
                 .id(userModel.getId())
                 .firstName(userModel.getFirstName())
                 .middleName(userModel.getMiddleName())
                 .lastName(userModel.getLastName())
-
                 .mobile(userModel.getMobile())
                 .email(userModel.getEmail())
                 .dateOfBirth(userModel.getDateOfBirth())
                 .adhaarNo(userModel.getAdhaarNo())
                 .gender(userModel.getGender())
         .build();
-//        userDto.setCreatedBy(userModel.getCreatedBy());
-//        userDto.setCreatedAt(userModel.getCreatedAt());
-//        userDto.setUpdatedBy(userModel.getUpdatedBy());
-//        userDto.setUpdatedAt(userModel.getUpdatedAt());
         return userRequestDto;
     }
 

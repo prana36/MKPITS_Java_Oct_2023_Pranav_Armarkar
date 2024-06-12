@@ -23,14 +23,17 @@ public class UserRequestDto
 
     @NotNull(message = "'firstName. ' cannot be null")
     @Pattern(regexp = "[a-zA-Z]+", message = "'firstName' can only contain alphabets")
+    @Size(max = 20, message = " limit exceed 'Firstname' limit is 20")
     private String firstName ;
 
     @NotNull(message = "'middleName. ' cannot be null")
     @Pattern(regexp = "[a-zA-Z]+", message = "'middleName' can only contain alphabets")
+    @Size(max = 20, message = " limit exceed 'Middle' limit is 20")
     private String middleName;
 
     @NotNull(message = "'lastName. ' cannot be null")
     @Pattern(regexp = "[a-zA-Z]+", message = "'lastName' can only contain alphabets")
+    @Size(max = 20, message = " limit exceed 'lastname' limit is 20")
     private String lastName ;
 
     @NotNull(message = "'username' cannot be null")

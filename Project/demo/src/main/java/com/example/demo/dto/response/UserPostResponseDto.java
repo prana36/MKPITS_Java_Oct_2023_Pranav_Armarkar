@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter // this Annotation will be generated  The getter method
 @NoArgsConstructor // this Annotation will be generated  The No Arguments constructor
 @AllArgsConstructor // this Annotation will be generated  The  Arguments constructor
-public class UserResponseDto {
+public class UserPostResponseDto {
 
     private Integer id ;
     private String firstName ;
