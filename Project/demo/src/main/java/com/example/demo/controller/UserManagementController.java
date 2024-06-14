@@ -4,6 +4,7 @@ import com.example.demo.dto.request.UserRequestDto;
 import com.example.demo.dto.response.ErrorResponseDto;
 import com.example.demo.dto.response.UserGetResponseDto;
 import com.example.demo.dto.response.UserPostResponseDto;
+import com.example.demo.dto.response.UserUpdateResponseDto;
 import com.example.demo.service.IUserServices;
 import com.example.demo.validator.UserValidator;
 import jakarta.validation.Valid;
@@ -28,10 +29,13 @@ public class UserManagementController {
     @GetMapping("/v1/users/{id}")
     private ResponseEntity<Object> getUser(@PathVariable("id") Integer id){
         // Assign the functionality of IUserServices to Decleared Variable Of type UserManagementDto
-        UserGetResponseDto userGetResponseDto =iUserServices.getUserById(id);
+
+        UserRequestDto userRequestDto =iUserServices.getUserById(id);
+        boolean isValidId = userValidator.validateId(userRequestDto.getId());
         System.out.println("Autowired EMP Service: "+iUserServices.hashCode());
 
-        return ResponseEntity.ok(userGetResponseDto); // Returning the  of usermanagementDto The Response Entity
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(userRequestDto);
+//        return ResponseEntity.ok(userGetResponseDto); // Returning the  of usermanagementDto The Response Entity
     }
 
 //    @RequestMapping(value = "/v1/users", method = RequestMethod.GET)
@@ -61,7 +65,7 @@ public class UserManagementController {
     @PutMapping("/v1/users/{id}")
     public ResponseEntity<Object> updateUser(@PathVariable("id") Integer id, @RequestBody UserRequestDto userRequestDto) {
         userRequestDto.setId(id);
-        UserRequestDto userRequestDtoReturn = iUserServices.updateUser(userRequestDto);
+        UserUpdateResponseDto userRequestDtoReturn = iUserServices.updateUser(userRequestDto);
         return ResponseEntity.ok(userRequestDtoReturn);
     }
 
@@ -69,7 +73,7 @@ public class UserManagementController {
     @PatchMapping("/v1/users/{id}")
     public ResponseEntity<Object> updatePartialUser(@PathVariable("id") Integer id, @RequestBody UserRequestDto userRequestDto) {
         userRequestDto.setId(id);
-        UserRequestDto userRequestDtoReturn = iUserServices.updatePartialUser(userRequestDto);
+        UserUpdateResponseDto userRequestDtoReturn = iUserServices.updatePartialUser(userRequestDto);
         return ResponseEntity.ok(userRequestDtoReturn);
     }
 

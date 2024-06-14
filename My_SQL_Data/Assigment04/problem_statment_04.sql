@@ -1,0 +1,2 @@
+#4.	Get the titles of all films rented by the customer named "William Brown".
+select film.title ,customer.first_name,customer.last_name from film join customer on film.film_id = customer.customer_id where customer.first_name ="William" or customer.last_name ="Brown";

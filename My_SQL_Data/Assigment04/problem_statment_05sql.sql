@@ -1,0 +1,2 @@
+#5.	Retrieve the film titles rented by the customer with customer_id 100.
+select film.title ,customer.first_name from film join customer on film.film_id = customer.customer_id where customer_id = "100";

@@ -32,16 +32,16 @@ public class UserService implements IUserServices
     UserCredentailsRepository userCredentialRepository;
 
     @Override
-    public UserGetResponseDto getUserById(Integer id) {
+    public UserRequestDto getUserById(Integer id) {
 
         Optional<UserModel> userModel = userRepository.findById(id);
-        UserGetResponseDto userGetResponseDto = new UserGetResponseDto();
+        UserRequestDto userRequestDto = new UserRequestDto();
         if (userModel.isPresent()){
 
-            userGetResponseDto = convertUserModelToUserGetResponseDto(userModel.get());
+            userRequestDto = convertUserModelToUserDto(userModel.get());
         }
 
-        return userGetResponseDto;
+        return userRequestDto;
     }
 
     @Override
@@ -58,6 +58,7 @@ public class UserService implements IUserServices
     private UserGetResponseDto convertUserModelToUserGetResponseDto(UserModel userModel) {
 
         UserGetResponseDto userGetResponseDto = UserGetResponseDto.builder()
+                .id(userModel.getId())
                 .firstName(userModel.getFirstName())
                 .middleName(userModel.getMiddleName())
                 .lastName(userModel.getLastName())
@@ -70,7 +71,7 @@ public class UserService implements IUserServices
 
         return userGetResponseDto;
     }
-    
+
     @Override
     @Transactional
     public UserPostResponseDto createUser(UserRequestDto userRequestDto) {
@@ -109,7 +110,7 @@ public class UserService implements IUserServices
     }
 
     @Override
-    public UserRequestDto updateUser(UserRequestDto userRequestDto) {
+    public UserUpdateResponseDto updateUser(UserRequestDto userRequestDto) {
         Optional<UserModel> optionalUserDbModel = userRepository.findById(userRequestDto.getId());
         if (optionalUserDbModel.isEmpty()){
             System.out.println("User data with id: "+ userRequestDto.getId() +"not found");
@@ -118,22 +119,21 @@ public class UserService implements IUserServices
             UserModel userModel = convertUserDtoToUserModel(userRequestDto, optionalUserDbModel.get());
             userModel.setId(userRequestDto.getId());
             userModel =userRepository.save(userModel);
-            return convertUserModelToUserDto(userModel);
+            return convertUserModelToUserUpdateResponseDto(userModel);
         }
 
-
-        return userRequestDto;
+        UserUpdateResponseDto userUpdateResponseDto = new UserUpdateResponseDto();
+        return userUpdateResponseDto;
     }
 
     @Override
-    public UserRequestDto updatePartialUser(UserRequestDto userRequestDto) {
+    public UserUpdateResponseDto updatePartialUser(UserRequestDto userRequestDto) {
         Optional<UserModel> optionalUserModel = userRepository.findById(userRequestDto.getId());
         if (optionalUserModel.isEmpty()){
             System.out.println("User data with id: "+ userRequestDto.getId() +"not found");
         }else {
             // Assigning  the data of optionalUserModel
             UserModel userModel = optionalUserModel.get();
-
             //  edit particular attributes
             userModel.setFirstName(userRequestDto.getFirstName() != null && !userRequestDto.getFirstName().equals(userModel.getFirstName())? userRequestDto.getFirstName(): userModel.getFirstName());
             userModel.setMiddleName(userRequestDto.getMiddleName() != null && !userRequestDto.getMiddleName().equals(userModel.getMiddleName())? userRequestDto.getMiddleName(): userModel.getMiddleName());
@@ -148,26 +148,26 @@ public class UserService implements IUserServices
             userModel.setUpdatedAt(LocalDateTime.now());
             userRepository.save(userModel);
 
-            return convertUserModelToUserDto(userModel);
+            return convertUserModelToUserUpdateResponseDto(userModel);
         }
-        return userRequestDto;
+        UserUpdateResponseDto userUpdateResponseDto = new UserUpdateResponseDto();
+        return userUpdateResponseDto;
     }
 
-    // do it later
-//    private UserUpdateResponseDto convertUserModelToUserUpdateResponseDto(UserModel userModel) {
-//
-//        UserUpdateResponseDto userUpdateResponseDto = UserUpdateResponseDto.builder()
-//                .firstName(userModel.getFirstName())
-//                .middleName(userModel.getMiddleName())
-//                .lastName(userModel.getLastName())
-//                .mobile(userModel.getMobile())
-//                .email(userModel.getEmail())
-//                .dateOfBirth(userModel.getDateOfBirth())
-//                .adhaarNo(userModel.getAdhaarNo())
-//                .gender(userModel.getGender())
-//                .build();
-//        return userUpdateResponseDto;
-//    }
+    private UserUpdateResponseDto convertUserModelToUserUpdateResponseDto(UserModel userModel) {
+
+        UserUpdateResponseDto userUpdateResponseDto = UserUpdateResponseDto.builder()
+                .firstName(userModel.getFirstName())
+                .middleName(userModel.getMiddleName())
+                .lastName(userModel.getLastName())
+                .mobile(userModel.getMobile())
+                .email(userModel.getEmail())
+                .dateOfBirth(userModel.getDateOfBirth())
+                .adhaarNo(userModel.getAdhaarNo())
+                .gender(userModel.getGender())
+                .build();
+        return userUpdateResponseDto;
+    }
 
     @Override
     public UserRequestDto deleteUser(Integer id) {
@@ -197,6 +197,8 @@ public class UserService implements IUserServices
                 .dateOfBirth(userRequestDto.getDateOfBirth())
                 .adhaarNo(userRequestDto.getAdhaarNo())
                 .gender(userRequestDto.getGender())
+                .createdBy(userModel.getCreatedBy())
+                .createdAt(userModel.getCreatedAt())
                 .updatedBy(1)
                 .updatedAt(LocalDateTime.now())
                 .build();

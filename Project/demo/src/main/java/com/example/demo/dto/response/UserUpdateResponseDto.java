@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @JsonInclude(JsonInclude.Include.NON_NULL) // To avoid  Null value in bellow attribute
 public class UserUpdateResponseDto
 {
-    private Integer id ;
+
     private String firstName ;
     private String middleName;
     private String lastName ;

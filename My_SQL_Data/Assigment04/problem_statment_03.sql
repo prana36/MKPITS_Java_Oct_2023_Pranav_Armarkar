@@ -1,0 +1,2 @@
+#3.	List the names of actors who have appeared in the film titled "Chamber Italian".
+select actor.first_name,actor.last_name, film.title from actor join film on actor.actor_id =film.film_id where title = "Chamber Italian";

@@ -2,6 +2,7 @@ package com.example.demo.dto.response;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import jakarta.persistence.Entity;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 @JsonInclude(JsonInclude.Include.NON_NULL) // To avoid  Null value in bellow attribute
 public class UserGetResponseDto
 {
+    private  Integer id;
     private String firstName ;
     private String middleName;
     private String lastName ;
