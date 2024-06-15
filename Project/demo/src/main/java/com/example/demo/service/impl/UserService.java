@@ -218,7 +218,7 @@ public class UserService implements IUserServices
                 .dateOfBirth(userModel.getDateOfBirth())
                 .adhaarNo(userModel.getAdhaarNo())
                 .gender(userModel.getGender())
-        .build();
+          .build();
         return userRequestDto;
     }
 
