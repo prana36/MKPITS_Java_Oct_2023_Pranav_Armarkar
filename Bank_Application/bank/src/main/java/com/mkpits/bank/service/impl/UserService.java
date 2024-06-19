@@ -1,10 +1,13 @@
 package com.mkpits.bank.service.impl;
 
+import com.mkpits.bank.dto.request.AccountsRequestDto;
 import com.mkpits.bank.dto.request.UserRequestDto;
 import com.mkpits.bank.dto.response.UserGetResponseDto;
 import com.mkpits.bank.dto.response.UserPostResponseDto;
 import com.mkpits.bank.dto.response.UserUpdateResponseDto;
+import com.mkpits.bank.mysql.model.AccountModel;
 import com.mkpits.bank.mysql.model.UserModel;
+import com.mkpits.bank.repository.AccountsRepository;
 import com.mkpits.bank.repository.UserRepository;
 import com.mkpits.bank.service.IUserService;
 import jakarta.transaction.Transactional;
@@ -20,6 +23,9 @@ import java.util.Optional;
 public class UserService implements IUserService {
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    AccountsRepository accountsRepository;
 
     @Override
     public UserGetResponseDto getUserById(Integer id) {
@@ -62,6 +68,7 @@ public class UserService implements IUserService {
                 .zipCode(userModel.getZipCode())
                 .build();
         return userGetResponseDto;
+
     }
 
     @Override
@@ -73,12 +80,23 @@ public class UserService implements IUserService {
         userModel.setCreatedAt(LocalDateTime.now());
         userModel = userRepository.save(userModel);
 
+        // Below code saves data in accounts table
+//        AccountsRequestDto accountsRequestDto = new AccountsRequestDto();
+        AccountModel accountModel = AccountModel.builder()
+                .userId(userModel.getId())
+                .rateOfIntrest("10")
+                .balance(userRequestDto.getBalance())
+                .accountType(userRequestDto.getAccountType())
+                .updatedBy(1)
+                .updatedAt(LocalDateTime.now())
+                .build();
+
+        accountsRepository.save(accountModel);
+
         UserPostResponseDto userPostResponseDto = UserPostResponseDto.builder()
-                .firstName(userModel.getFirstName())
                 .firstName(userModel.getFirstName())
                 .lastName(userModel.getLastName())
                 .email(userModel.getEmail())
-                .massege(" Account Created successfully !!!")
                 .build();
 
         return userPostResponseDto;
@@ -123,6 +141,7 @@ public class UserService implements IUserService {
 
     private UserUpdateResponseDto converUserModelToUserUpdateResponse(UserModel userModel) {
         UserUpdateResponseDto userUpdateResponseDto = UserUpdateResponseDto.builder()
+
                 .firstName(userModel.getFirstName())
                 .lastName(userModel.getLastName())
                 .gender(userModel.getGender())

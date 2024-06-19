@@ -16,11 +16,11 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-public class BankController {
+public class UserController {
     @Autowired
     IUserService iuserService;
 
-    @GetMapping("/v1/user/{id}")
+    @GetMapping("/api/v1/users/{id}")
     public ResponseEntity<Object> getUser(@PathVariable("id") Integer id){
 
         UserGetResponseDto userGetResponseDto = iuserService.getUserById(id);
@@ -28,37 +28,37 @@ public class BankController {
         return ResponseEntity.ok(userGetResponseDto) ;
     }
 
-    @GetMapping(value = "/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/api/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
     public  ResponseEntity<Object> getAllUsers(){
         List<UserGetResponseDto> userGetResponseDtoList = iuserService.getAllUsers();
         return ResponseEntity.ok(userGetResponseDtoList);
     }
 
-    @PostMapping("/v1/user")
+    @PostMapping("/api/v1/users")
     public ResponseEntity<Object> createUser(@RequestBody UserRequestDto userRequestDto){
         UserPostResponseDto userPostResponseDto =iuserService.createUser(userRequestDto);
 
         return ResponseEntity.created(URI.create("/v1/user"+ userPostResponseDto.getId())).body(userPostResponseDto);
     }
 
-    @PutMapping("/v1/user/{id}")
+    @PutMapping("/api/v1/users/{id}")
     public ResponseEntity<Object> updateUser(@PathVariable("id") Integer id, @RequestBody UserRequestDto userRequestDto) {
         userRequestDto.setId(id);
         UserUpdateResponseDto userRequestDtoReturn = iuserService.updateUser(userRequestDto);
         return ResponseEntity.ok(userRequestDtoReturn);
     }
-    @PatchMapping("/v1/user/{id}")
+    @PatchMapping("/api/v1/users/{id}")
     public ResponseEntity<Object> updatePartialUser(@PathVariable("id") Integer id, @RequestBody UserRequestDto userRequestDto) {
         userRequestDto.setId(id);
         UserUpdateResponseDto userRequestDtoReturn = iuserService.UpdatePartialUser(userRequestDto);
         return ResponseEntity.ok(userRequestDtoReturn);
     }
 
-    @DeleteMapping("/v1/user/{id}")
+    @DeleteMapping("/api/v1/users/{id}")
     public ResponseEntity<Object> deleteUser(@PathVariable("id") Integer id){
 
-        UserRequestDto userRequestDtoSql = iuserService.deleteUser(id);
-        if (userRequestDtoSql != null) {
+        UserRequestDto userRequestDto = iuserService.deleteUser(id);
+        if (userRequestDto != null) {
             return new ResponseEntity<>("User with ID " + id + " deleted successfully", HttpStatus.OK);
         } else  {
             return new ResponseEntity<>("User with ID " + id + " not found", HttpStatus.NOT_FOUND);

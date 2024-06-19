@@ -20,10 +20,6 @@ public class UserController {
         this.userDemoServiceSetter = userDemoServiceSetter;
     }
 
-
-
-
-
     @RequestMapping("/v1/user/constructor")
     public ResponseEntity<Object> getUserFromConstructor(){
         UserDemoDto userDemoDtoByConstructor = userDemoServiceConstructor.getAllUsers();

@@ -21,7 +21,7 @@ public class UserPostResponseDto {
     private String email;
     private String city;
 
-    private String massege;
+
 
 }
 

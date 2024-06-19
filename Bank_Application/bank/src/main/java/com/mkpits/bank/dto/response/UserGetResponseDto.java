@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserGetResponseDto {
     private String firstName;
     private String lastName;
@@ -24,5 +24,13 @@ public class UserGetResponseDto {
     private String city;
     private String state;
     private String zipCode;
+
+
+   //Account details
+    private Integer userId ;
+    private String accountType;
+    private String balance;
+    private String rateOfIntrest ;
+
 }
 

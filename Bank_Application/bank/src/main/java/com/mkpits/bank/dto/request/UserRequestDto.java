@@ -1,5 +1,6 @@
 package com.mkpits.bank.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserRequestDto
 {
     private Integer id;
@@ -27,5 +29,11 @@ public class UserRequestDto
     private LocalDateTime createdAt ;
     private Integer updatedBy;
     private LocalDateTime updatedAt;
+
+    //
+    private Integer userId ;
+    private String accountType;
+    private String balance;
+    private String rateOfIntrest ;
 
 }
