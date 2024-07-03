@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+    <h1>Login</h1>
+    <form id="login-form" onsubmit="handleLogin(event)">
+        <div class="form-group">
+            <label for="login-type">Login Type:</label>
+            <select id="login-type" name="login-type" required>
+                <option value="">Select Type</option>
+                <option value="admin">Admin</option>
+                <option value="user">user</option>
+                <option value="employee">Employee</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <a href="#">Forgot Password?</a>
+        </div>
+        <div class="form-group">
+            Don't have an account ?
+            <a href="/registration">Register</a>
+        </div>
+        <button type="submit" >Login</button>
+    </form>
+</div>
+</div>
+<script >
+    function handleLogin(event) {
+      event.preventDefault();
+      var role = document.getElementById('login-type').value;
+      if (role === 'admin') {
+          window.location.href = '/admin/dashboard';
+      } else if (role === 'employee') {
+          window.location.href = '/employee/dashboard';
+      }
+    }
+</script>
+</body>
+</html>
