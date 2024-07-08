@@ -1,4 +1,5 @@
-package com.mkpits.bank.dto;
+package com.mkpits.bank.dto.response;
+
 
 import lombok.*;
 
@@ -9,16 +10,16 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserResponseDto {
+public class EmployeeResponseDto {
+
     private Integer id;
-    private String firstName;
-    private String middleName;
-    private String lastName;
+    private String fullName;
     private String mobile;
     private String email;
-    private Character gender;
+    private String gender;
     private LocalDate dateOfBirth;
-    private String cin;
     private String aadharNo;
-
+    private String address;
+    private String state;
+    private String city;
 }

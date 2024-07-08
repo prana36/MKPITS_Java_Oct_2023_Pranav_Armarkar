@@ -33,5 +33,5 @@ public class Account {
     @Column(name = "opening_date")
     private LocalDate openingDate;
 //    @Column(name = "closing_date")
-//    private LocalDate closeingDate;
+//    private LocalDate closeingDate;
 }

@@ -1,4 +1,4 @@
-package com.mkpits.bank.dto;
+package com.mkpits.bank.dto.response;
 
 
 import lombok.*;

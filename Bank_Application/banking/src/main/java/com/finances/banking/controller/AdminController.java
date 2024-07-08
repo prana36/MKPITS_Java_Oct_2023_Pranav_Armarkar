@@ -9,7 +9,7 @@ public class AdminController {
     @GetMapping("/admin/dashboard")
     public String adminDashBoard(){
 
-        return "/admin/index";
+        return "/admin/dashboard/dashboard";
     }
 
     @GetMapping("/admin/dashboard/usermanagement")

@@ -3,6 +3,9 @@ package com.mkpits.bank.mysql.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -27,12 +30,22 @@ public class User {
     private String email;
 
     @Column(name = "gender")
-    private Character gender;
-    //    @Column(name = "date_of_birth")
-//    private LocalDate dateOfBirth;
+    private String gender;
+
+
+    @Column(name = "date_of_birth")
+    private String dateOfBirth;
+
+
     @Column(name = "cin")
     private String cin;
 
     @Column(name = "adhaar_card")
-    private String aadharCard;
+    private String aadharNo;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
+    @Column(name = "created_by")
+    private Integer createdBy;
 }

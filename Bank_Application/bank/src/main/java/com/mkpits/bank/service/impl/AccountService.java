@@ -1,6 +1,6 @@
 package com.mkpits.bank.service.impl;
 
-import com.mkpits.bank.dto.AccountResponseDto;
+import com.mkpits.bank.dto.response.AccountResponseDto;
 import com.mkpits.bank.mysql.model.Account;
 import com.mkpits.bank.repository.AccountRepository;
 import com.mkpits.bank.service.IAccountService;

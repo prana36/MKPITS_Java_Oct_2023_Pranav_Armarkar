@@ -108,7 +108,7 @@
         <div class="page-header">
             <h1  th:text="${customerDetalis.firstName}"></h1>
             <h5><span th:text="${customerDetalis.email}"></span> /<span th:text="${customerDetalis.mobile}"></span> / <span th:text="${customerDetalis.gender}"></span></h5>
-            <small> Adress</small>
+            <small th:text="${customerAddress.address}"></small>
         </div>
 
         <div class="page-content">
